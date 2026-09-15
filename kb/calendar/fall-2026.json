@@ -329,7 +329,7 @@
         "event_type": "instruction-period",
         "date_start": "2026-08-25",
         "date_end": null,
-        "weekday_as_published": "Friday",
+        "weekday_as_published": "Tuesday",
         "time": "08:00",
         "affects_classes": "yes",
         "student_action_required": false,
