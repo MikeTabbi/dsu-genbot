@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/prose-chunk.schema.json",
+  "title": "Prose Chunk Payload",
+  "description": "A semantically bounded slice of a policy, catalog, or handbook document. The only class that goes through vector RAG as its primary path.",
+  "type": "object",
+  "required": ["heading_path", "text", "chunk_index", "chunk_total"],
+  "additionalProperties": false,
+  "properties": {
+    "heading_path": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "e.g. ['Academic Catalog','Grading','Pass-Fail Option']. Prepended to the embedded text to restore the context chunking destroys."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 40,
+      "description": "Target 300-800 tokens. Never split mid-clause or mid-sentence."
+    },
+    "chunk_index": { "type": "integer", "minimum": 0 },
+    "chunk_total": { "type": "integer", "minimum": 1 },
+    "token_estimate": { "type": "integer", "minimum": 1 },
+    "extracted_tables": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ids of reference-table records lifted out of this section. Tables are NOT left in the embedded text."
+    },
+    "defines_terms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Terms this chunk authoritatively defines; boosts retrieval for definition questions."
+    },
+    "data_quality_flags": {
+      "type": "array",
+      "items": { "enum": ["extraction-uncertain", "table-detected-not-extracted", "heading-inferred", "ocr-derived", "needs-owner-confirmation"] }
+    }
+  }
+}

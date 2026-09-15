@@ -1,0 +1,3461 @@
+{
+  "collection": "routing",
+  "discovery_card": {
+    "id": "card.routing",
+    "text": "Which Delaware State University office handles which student question, and how to reach them: registration and records, tuition and billing, financial aid, IT and password help, housing and dining, academic advising. Answers 'who do I talk to about...' and 'where do I go for...' questions.",
+    "answered_by_tool": "routing",
+    "note": "Class A. Authored institutional knowledge -- this mapping exists on no web page and cannot be harvested."
+  },
+  "authoring_note": "Office phone numbers and emails are NULL by design. About 80 department numbers are on one page (desu.edu/about/campus-contacts); populate them with one crawler run plus a human check rather than by transcription. Clear the 'office-contact-unpopulated' flag per record as each is confirmed.",
+  "coverage_summary": {
+    "partial": 21,
+    "route-only": 15,
+    "answerable": 2,
+    "never-answer": 4
+  },
+  "records": [
+    {
+      "id": "contact.office.records-registration",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "Records & Registration",
+        "department": "Records & Registration",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "the registrar",
+          "registrar's office",
+          "records office",
+          "registration office"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Records & Registration"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:4315c6535f21d092b6e05692066f5532",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "contact.office.student-accounts",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "Student Accounts",
+        "department": "Student Accounts",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "the bursar",
+          "bursar's office",
+          "billing",
+          "student billing",
+          "cashier"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Student Accounts"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:f943f52416ea94b27b71b1ed113a6df2",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "contact.office.financial-aid",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "Financial Aid",
+        "department": "Financial Aid",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "aid office",
+          "financial aid office",
+          "fafsa office",
+          "scholarship office"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Financial Aid"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:7ad5ce5a68787c9134d90f51ddaa433c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "contact.office.it-help-desk",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "IT Help Desk",
+        "department": "IT Help Desk",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "help desk",
+          "tech support",
+          "IT",
+          "computer help",
+          "OIT"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "IT Help Desk"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:328815eebb1d2aee2d898955944ee938",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "contact.office.housing",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "Housing & Residence Life",
+        "department": "Housing & Residence Life",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "res life",
+          "residence life",
+          "housing office",
+          "dorm office",
+          "RA office"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Housing & Residence Life"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:cbbac195f887694d5139479824642970",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "contact.office.advisement",
+      "kb_class": "structured-record",
+      "collection": "contacts",
+      "payload": {
+        "contact_type": "office",
+        "display_name": "Academic Advisement",
+        "department": "Academic Advisement",
+        "job_title": null,
+        "reports_to_office": null,
+        "channels": {
+          "email": null,
+          "phone": null,
+          "phone_extension": null,
+          "fax": null,
+          "url": "https://www.desu.edu/about/campus-contacts",
+          "ticket_url": null,
+          "appointment_url": null
+        },
+        "location": null,
+        "hours": null,
+        "serves_audience": [
+          "student"
+        ],
+        "source_authority": "manually-verified",
+        "preferred_contact_note": null,
+        "aliases": [
+          "advising",
+          "academic advising",
+          "my advisor",
+          "advisement center"
+        ],
+        "do_not_publish": false,
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "no-hours-published",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Academic Advisement"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:c368b523b5ae3dd1442f227b59c4b887",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.registering-for-classes",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Registering for classes",
+        "aliases": [
+          "how do I register",
+          "sign up for classes",
+          "add a class",
+          "course registration",
+          "when can I register"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Registration windows and add/drop deadlines come from the academic calendar. Eligibility, holds, and open seats do not.",
+        "handoff_needs": [
+          "term",
+          "course or CRN if known",
+          "whether they've met with an advisor"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Registering for classes"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:71d9d15fe09386311750b41d877966fd",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.dropping-or-withdrawing-from-a-course",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Dropping or withdrawing from a course",
+        "aliases": [
+          "drop a class",
+          "withdraw from a class",
+          "quit a course",
+          "take a W",
+          "get out of a class"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Deadlines and the W/refund consequences are answerable from the calendar and refund schedule. Whether it's the right choice for the student is not.",
+        "handoff_needs": [
+          "course",
+          "academic session",
+          "reason if they offer it"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Dropping or withdrawing from a course"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:44d605d422c1f08450ab83d5d940302b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.transcript-request",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Transcript request",
+        "aliases": [
+          "get my transcript",
+          "order a transcript",
+          "send my transcript",
+          "official transcript",
+          "unofficial transcript"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Requests are tied to the student's record and any balance owed.",
+        "handoff_needs": [
+          "official or unofficial",
+          "where it's being sent",
+          "deadline"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Transcript request"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:e231e2e6c14697880ba31ed8a0ed42b0",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.enrollment-or-degree-verification",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Enrollment or degree verification",
+        "aliases": [
+          "enrollment verification",
+          "proof of enrollment",
+          "verify I'm a student",
+          "insurance form",
+          "degree verification"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "who needs the verification",
+          "deadline"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Enrollment or degree verification"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:0e550d880ff07428e273d6093eb1a7e9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.grades-and-grade-posting",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Grades and grade posting",
+        "aliases": [
+          "when do grades come out",
+          "my grades aren't posted",
+          "final grades",
+          "midterm grades",
+          "grade change"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Grade due dates are on the academic calendar. A student's own grades are not accessible to the assistant.",
+        "handoff_needs": [
+          "term",
+          "course",
+          "instructor"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Grades and grade posting"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:be3d659e68d20fed0482f6769ae00e22",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.incomplete-grade",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Incomplete grade",
+        "aliases": [
+          "I have an incomplete",
+          "remove an incomplete",
+          "I grade",
+          "finish an incomplete"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "The deadline to remove incompletes is on the calendar; the arrangement is between the student and the instructor.",
+        "handoff_needs": [
+          "course",
+          "instructor",
+          "term the incomplete is from"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Incomplete grade"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:04e5d49e5c9ffe00dcd4e9f8d98fef04",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.applying-for-graduation",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Applying for graduation",
+        "aliases": [
+          "apply to graduate",
+          "graduation application",
+          "am I graduating",
+          "senior audit",
+          "commencement"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "The application deadline is on the calendar. Whether requirements are met is a degree audit and requires the student's record.",
+        "handoff_needs": [
+          "expected graduation term",
+          "major",
+          "whether they've applied already"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Applying for graduation"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:b861d6dc6c0642ec6021a062b8086f89",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.name-address-or-personal-information-change",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Name, address, or personal information change",
+        "aliases": [
+          "change my name",
+          "update my address",
+          "change my legal name",
+          "update my phone number",
+          "preferred name"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "what's changing",
+          "whether documentation is needed"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Name, address, or personal information change"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:fe1edc18afe2b144e0d967ea99ffb9cc",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.pass-fail-request",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Pass-Fail request",
+        "aliases": [
+          "take a class pass fail",
+          "pass/fail option",
+          "switch to pass fail"
+        ],
+        "office": "Records & Registration",
+        "office_contact_id": "contact.office.records-registration",
+        "escalation_queue": "records-registration",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "The deadline is on the calendar. Eligibility rules are in the academic catalog and should not be summarized from memory.",
+        "handoff_needs": [
+          "course",
+          "session"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Pass-Fail request"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Records & Registration KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:da8f74ebd82aab5cf5dc2ebd9d325b7b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.tuition-bill-and-payment",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Tuition bill and payment",
+        "aliases": [
+          "my bill",
+          "how much do I owe",
+          "pay my tuition",
+          "payment due date",
+          "where do I pay"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Payment due dates are on the academic calendar. A student's balance is not accessible to the assistant.",
+        "handoff_needs": [
+          "term",
+          "whether they're on a payment plan"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Tuition bill and payment"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:74bcea73ccbdbd431e90c63a8cbdf9d9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.payment-plan",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Payment plan",
+        "aliases": [
+          "set up a payment plan",
+          "pay in installments",
+          "monthly payments",
+          "can I pay later"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "term",
+          "amount they can pay now"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Payment plan"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:fb4456d856e75eec3d6933ff669f5bf3",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.refund-for-a-dropped-or-withdrawn-course",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Refund for a dropped or withdrawn course",
+        "aliases": [
+          "will I get my money back",
+          "refund for dropping",
+          "tuition refund",
+          "am I getting a refund"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "The published refund schedule can be applied to a date, but it currently contradicts itself in the first nine days -- see the data-quality report. Amounts are advisory until Student Accounts confirms.",
+        "handoff_needs": [
+          "withdrawal date",
+          "session",
+          "course"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Refund for a dropped or withdrawn course"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:23bbf0bd352a3277cdc105d747523d1f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.financial-hold-on-my-account",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Financial hold on my account",
+        "aliases": [
+          "I have a hold",
+          "why can't I register",
+          "account hold",
+          "balance hold",
+          "hold on my account"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Holds are account-specific. Note that not every hold is financial -- academic and advisement holds route elsewhere, so ask before assuming.",
+        "handoff_needs": [
+          "what the hold message says",
+          "term they're trying to register for"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Financial hold on my account"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:b3a3c68e740e7eeefad2695919732663",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.1098-t-tax-form",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "1098-T tax form",
+        "aliases": [
+          "1098-T",
+          "tax form for tuition",
+          "tuition tax statement"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "tax year"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "1098-T tax form"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:4ce32da172763aa09ae8f0187b2b5fa5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.refund-disbursement-and-direct-deposit",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Refund disbursement and direct deposit",
+        "aliases": [
+          "when will I get my refund check",
+          "direct deposit",
+          "refund disbursement",
+          "excess aid refund"
+        ],
+        "office": "Student Accounts",
+        "office_contact_id": "contact.office.student-accounts",
+        "escalation_queue": "student-accounts",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "term",
+          "whether direct deposit is set up"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Refund disbursement and direct deposit"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Student Accounts, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:0350e4311fe386f19a09b89783524181",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.fafsa-and-aid-application",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "FAFSA and aid application",
+        "aliases": [
+          "fafsa",
+          "apply for financial aid",
+          "aid application",
+          "fafsa deadline"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "General process and deadlines only. Anything about the student's own application routes to the office.",
+        "handoff_needs": [
+          "aid year",
+          "whether the FAFSA is submitted"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "FAFSA and aid application"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:b843b4dd60557efd7aaa4cc4543dfee2",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.award-letter-and-aid-package",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Award letter and aid package",
+        "aliases": [
+          "my award letter",
+          "how much aid did I get",
+          "aid package",
+          "my financial aid offer"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "aid year"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Award letter and aid package"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:84bdcf1d1a30051638d2b380c2b2b0b9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.verification-and-required-documents",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Verification and required documents",
+        "aliases": [
+          "aid verification",
+          "they need documents",
+          "selected for verification",
+          "missing paperwork financial aid"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "what document was requested",
+          "aid year"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Verification and required documents"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:789ec69ed52be480a62cd17713dacb90",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.scholarships",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Scholarships",
+        "aliases": [
+          "scholarships",
+          "apply for a scholarship",
+          "scholarship deadline",
+          "institutional scholarship"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "type of scholarship",
+          "class year"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Scholarships"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:1eae46e307788be84e0aeaa3929027c9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.satisfactory-academic-progress-appeal",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Satisfactory Academic Progress appeal",
+        "aliases": [
+          "SAP appeal",
+          "lost my financial aid",
+          "aid suspension",
+          "appeal my aid"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Sensitive and consequential. Route promptly and warmly; do not describe appeal odds.",
+        "handoff_needs": [
+          "term",
+          "whether they've received an SAP notice"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Satisfactory Academic Progress appeal"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:c35cde2cc8a0e144742edfc3f9b2098d",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.work-study",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Work study",
+        "aliases": [
+          "work study",
+          "campus job",
+          "federal work study",
+          "student employment"
+        ],
+        "office": "Financial Aid",
+        "office_contact_id": "contact.office.financial-aid",
+        "escalation_queue": "financial-aid",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "whether work study is in their award"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Work study"
+      },
+      "owner": {
+        "department": "Financial Aid",
+        "liaison_role": "Financial Aid KB Liaison",
+        "escalation_queue": "financial-aid"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Financial Aid, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:c02e4497862a6651a61bf1d8e2988d91",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.password-reset-and-account-lockout",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Password reset and account lockout",
+        "aliases": [
+          "reset my password",
+          "I'm locked out",
+          "forgot my password",
+          "can't log in",
+          "password expired"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "answerable",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Self-service reset steps are documented and stable. This is the single highest-volume question on most campuses and should be fully answerable without a handoff.",
+        "handoff_needs": [
+          "username",
+          "what error they see"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Password reset and account lockout"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:73a6e8a67792e3bb8f2faffbcc68bc79",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.multi-factor-authentication",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Multi-factor authentication",
+        "aliases": [
+          "MFA",
+          "two factor",
+          "authenticator app",
+          "new phone MFA",
+          "verification code"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Setup steps are answerable. Re-enrolling a lost device needs identity verification.",
+        "handoff_needs": [
+          "whether they still have the old device",
+          "phone model"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Multi-factor authentication"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:8bfc0f6f77e929c3b710f31ddc20c7d5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.campus-wifi-and-network",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Campus wifi and network",
+        "aliases": [
+          "wifi",
+          "can't connect to wifi",
+          "internet in my dorm",
+          "network is down",
+          "ethernet"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "building and room",
+          "device type"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Campus wifi and network"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:43a49cf777d7d7b1f1c7b32236f5379d",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.email-access",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Email access",
+        "aliases": [
+          "my email",
+          "webmail",
+          "outlook",
+          "can't get my email",
+          "student email"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "device",
+          "error message"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Email access"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:3b11290f4b4ffb602d9fc1a89aa3d726",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.learning-management-system-access",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Learning management system access",
+        "aliases": [
+          "blackboard",
+          "canvas",
+          "my courses aren't showing",
+          "LMS",
+          "can't see my class online"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Access problems are IT. Missing course content is the instructor.",
+        "handoff_needs": [
+          "course",
+          "whether registration is confirmed"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Learning management system access"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:9ba94550ce31cf97a2e7a81d08ff742c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.banner-self-service-access",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Banner Self-Service access",
+        "aliases": [
+          "banner",
+          "self service",
+          "can't get into banner",
+          "banner 9"
+        ],
+        "office": "IT Help Desk",
+        "office_contact_id": "contact.office.it-help-desk",
+        "escalation_queue": "it-help-desk",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "error message",
+          "username"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Banner Self-Service access"
+      },
+      "owner": {
+        "department": "IT Help Desk",
+        "liaison_role": "IT Help Desk KB Liaison",
+        "escalation_queue": "it-help-desk"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "IT Help Desk, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:aba0ea402d022aee0877b3f03be19119",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.housing-application-and-room-assignment",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Housing application and room assignment",
+        "aliases": [
+          "apply for housing",
+          "my room assignment",
+          "where am I living",
+          "housing application",
+          "get a dorm"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "term",
+          "class year",
+          "whether they've applied"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Housing application and room assignment"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:58e859dacc9d400ab7c8b71e61101d1e",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.move-in-and-move-out-dates",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Move-in and move-out dates",
+        "aliases": [
+          "when can I move in",
+          "when do the dorms open",
+          "move out date",
+          "when do I have to leave"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "answerable",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Residence hall open and close dates are on the academic calendar and fully answerable.",
+        "handoff_needs": [],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Move-in and move-out dates"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:72ec24ef379d6d116491fc641511a1e9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.break-and-holiday-housing",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Break and holiday housing",
+        "aliases": [
+          "stay over thanksgiving",
+          "housing during break",
+          "winter break housing",
+          "can I stay in my dorm over break"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "The calendar gives hall closing dates; whether break housing is available and how to request it is a Housing question. Note the calendar publishes no residence-hall dates for the accelerated sessions.",
+        "handoff_needs": [
+          "which break",
+          "dates needed"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Break and holiday housing"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:3c78b757a9b1b43039b9e145696336df",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.room-change-or-roommate-issue",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Room change or roommate issue",
+        "aliases": [
+          "change my room",
+          "roommate problem",
+          "room swap",
+          "I want to move rooms",
+          "my roommate"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Interpersonal. Route with warmth and without editorializing.",
+        "handoff_needs": [
+          "building and room",
+          "nature of the issue at a high level"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Room change or roommate issue"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:5f4c4ac09f7e8f52be779793a982cca0",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.maintenance-request",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Maintenance request",
+        "aliases": [
+          "my ac is broken",
+          "maintenance request",
+          "work order",
+          "something is broken in my room",
+          "no hot water"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "building and room",
+          "what's broken",
+          "whether it's urgent"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Maintenance request"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:29c9fb1242ff5d20774ea20da5601b28",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.meal-plan",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Meal plan",
+        "aliases": [
+          "meal plan",
+          "dining dollars",
+          "change my meal plan",
+          "flex dollars"
+        ],
+        "office": "Housing & Residence Life",
+        "office_contact_id": "contact.office.housing",
+        "escalation_queue": "housing",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "current plan if known",
+          "term"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Meal plan"
+      },
+      "owner": {
+        "department": "Housing & Residence Life",
+        "liaison_role": "Housing & Residence Life KB Liaison",
+        "escalation_queue": "housing"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Housing & Residence Life, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:732c8cb58fcae1d56807a880110968d8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.choosing-courses-for-next-term",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Choosing courses for next term",
+        "aliases": [
+          "what classes should I take",
+          "pick my classes",
+          "course selection",
+          "what do I need to graduate"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Requires the student's degree progress. The advisement period dates are on the calendar.",
+        "handoff_needs": [
+          "major",
+          "class year",
+          "term"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Choosing courses for next term"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:2797a8dc9f22213b55e0ab77f8e0aa2c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.changing-major-or-adding-a-minor",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Changing major or adding a minor",
+        "aliases": [
+          "change my major",
+          "add a minor",
+          "switch majors",
+          "declare a major",
+          "double major"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "current major",
+          "intended major"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Changing major or adding a minor"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:3acf7ea4412cae83752f27234d216233",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.degree-audit-and-progress",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Degree audit and progress",
+        "aliases": [
+          "degree audit",
+          "how many credits do I need",
+          "am I on track",
+          "what requirements do I have left"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "major",
+          "expected graduation term"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Degree audit and progress"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:1e71e1256a79459fe149571cd9e7616a",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.academic-probation-and-early-alert",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Academic probation and early alert",
+        "aliases": [
+          "academic probation",
+          "early alert",
+          "I got a warning",
+          "failing a class",
+          "academic standing"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "route-only",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": true,
+        "answer_guidance": "Sensitive. Lead with support, not procedure. The Early Alert period is on the calendar.",
+        "handoff_needs": [
+          "course",
+          "term",
+          "whether they've been contacted already"
+        ],
+        "urgency": "time-sensitive",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Academic probation and early alert"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:97a054b2724d056d3b01cf46e1c3e8c3",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.tutoring-and-academic-support",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Tutoring and academic support",
+        "aliases": [
+          "tutoring",
+          "I need help in a class",
+          "study help",
+          "academic support",
+          "writing center"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "partial",
+        "topic_data_tier": 0,
+        "requires_own_record_lookup": false,
+        "answer_guidance": null,
+        "handoff_needs": [
+          "course",
+          "type of help needed"
+        ],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Tutoring and academic support"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:c849f9f6150ab88e909f855a76069151",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.mental-health-support",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Mental health support",
+        "aliases": [
+          "I need to talk to someone",
+          "counseling",
+          "I'm struggling",
+          "therapist",
+          "mental health",
+          "I'm depressed"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "never-answer",
+        "topic_data_tier": 3,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Follow the crisis protocol. Do not attempt advice, assessment, or triage questions. Offer Counseling Services and the 988 Suicide & Crisis Lifeline warmly and directly. This routing exists to guarantee a human path, not to enable a KB answer.",
+        "handoff_needs": [],
+        "urgency": "crisis",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Mental health support"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:8be2c3ed7989364c06d369cf1fdfc092",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.sexual-misconduct-harassment-or-discrimination",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Sexual misconduct, harassment, or discrimination",
+        "aliases": [
+          "title ix",
+          "harassment",
+          "assault",
+          "discrimination",
+          "report misconduct",
+          "someone hurt me"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "never-answer",
+        "topic_data_tier": 3,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Follow the crisis protocol and the Title IX notice requirements confirmed in Phase 0. Provide the reporting path; do not ask for details, do not summarize policy, do not characterize what happened.",
+        "handoff_needs": [],
+        "urgency": "crisis",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Sexual misconduct, harassment, or discrimination"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:0fbd4151d6e3c32a687605f848d815c7",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.immediate-safety-emergency",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Immediate safety emergency",
+        "aliases": [
+          "emergency",
+          "call the police",
+          "I'm in danger",
+          "someone is hurt",
+          "public safety"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "never-answer",
+        "topic_data_tier": 3,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Direct to 911 and DSU Public Safety immediately, at the top of the response, before anything else.",
+        "handoff_needs": [],
+        "urgency": "crisis",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Immediate safety emergency"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:8668061a722dc8acb3c49c2f4952b836",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "routing.disciplinary-or-conduct-matter",
+      "kb_class": "structured-record",
+      "collection": "routing",
+      "payload": {
+        "topic": "Disciplinary or conduct matter",
+        "aliases": [
+          "student conduct",
+          "I got written up",
+          "disciplinary hearing",
+          "code of conduct violation"
+        ],
+        "office": "Academic Advisement",
+        "office_contact_id": "contact.office.advisement",
+        "escalation_queue": "advisement",
+        "kb_coverage": "never-answer",
+        "topic_data_tier": 3,
+        "requires_own_record_lookup": false,
+        "answer_guidance": "Tier 3. Route to the appropriate office; hold no content and offer no interpretation.",
+        "handoff_needs": [],
+        "urgency": "routine",
+        "related_records": [],
+        "data_quality_flags": [
+          "office-contact-unpopulated",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "DSU Chatbot topic routing table",
+        "uri": "https://www.desu.edu/about/campus-contacts",
+        "source_updated": "2026-09-02",
+        "locator": "Disciplinary or conduct matter"
+      },
+      "owner": {
+        "department": "Academic Advisement",
+        "liaison_role": "Academic Advisement KB Liaison",
+        "escalation_queue": "advisement"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-09-02",
+        "effective_to": "2027-06-30",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "quarterly",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Advisement, Delaware State University",
+        "url": "https://www.desu.edu/about/campus-contacts"
+      },
+      "provenance": {
+        "ingested_at": "2026-09-02T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:1d7cdaded74afe56d510db949599b303",
+        "validation_status": "unvalidated"
+      }
+    }
+  ]
+}

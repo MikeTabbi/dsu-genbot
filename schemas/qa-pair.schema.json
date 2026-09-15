@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/qa-pair.schema.json",
+  "title": "Q&A Pair Payload",
+  "description": "Department-authored FAQ. Highest-precision retrieval path: the answer is returned close to verbatim, so a near-miss match is worse than no match.",
+  "type": "object",
+  "required": ["question", "answer", "paraphrases"],
+  "additionalProperties": false,
+  "properties": {
+    "question": { "type": "string", "minLength": 8 },
+    "answer": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 900,
+      "description": "<= ~120 words, in the persona voice. May contain {{ref:id}} placeholders resolved at answer time so facts stay in one home."
+    },
+    "paraphrases": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 12,
+      "items": { "type": "string" },
+      "description": "Real student phrasings, ideally harvested from ticket data during department onboarding. This is where containment rate comes from."
+    },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ids of records supplying live values. Unresolvable references fail the validation gate."
+    },
+    "escalation_hint": {
+      "type": ["string", "null"],
+      "description": "When this answer is likely insufficient, what to offer next."
+    },
+    "never_answer_if": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Conditions that must force escalation instead of this answer (e.g. 'student mentions a hold', 'student asks about their own balance')."
+    }
+  }
+}

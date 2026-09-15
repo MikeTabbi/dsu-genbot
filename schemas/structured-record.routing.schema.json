@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/structured-record.routing.schema.json",
+  "title": "Topic Routing Payload",
+  "description": "Maps a student topic to the office that owns it, the queue an escalation goes to, and whether the KB can answer it at all. This content exists on no web page -- it is institutional knowledge that has to be authored, and it is what turns a contact list into a working front desk.",
+  "type": "object",
+  "required": ["topic", "aliases", "office", "escalation_queue", "kb_coverage", "topic_data_tier"],
+  "additionalProperties": false,
+  "properties": {
+    "topic": { "type": "string", "minLength": 3, "description": "Canonical name for the thing the student needs." },
+    "aliases": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string" },
+      "description": "How students actually say it. Official office names are rarely what anyone searches for."
+    },
+    "office": { "type": "string", "description": "Owning office. Should match a contact record's display_name." },
+    "office_contact_id": {
+      "type": ["string", "null"],
+      "description": "id of the contact record supplying live phone/email, so the number lives in one place."
+    },
+    "escalation_queue": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "kb_coverage": {
+      "enum": ["answerable", "partial", "route-only", "never-answer"],
+      "description": "answerable = the KB has what's needed. partial = general answer possible, specifics need the office. route-only = hand off immediately, no attempt. never-answer = Tier 3; the handoff IS the correct answer and no content may be added later."
+    },
+    "topic_data_tier": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3,
+      "description": "Sensitivity of the TOPIC, not of this record. The routing record itself is always Tier 0 public information -- 'mental health support is handled by Counseling Services' is not confidential, and it is precisely the record that guarantees a human handoff exists. Do not conflate the two: a topic_data_tier of 3 must pair with kb_coverage 'never-answer', which the validation gate enforces."
+    },
+    "requires_own_record_lookup": {
+      "type": "boolean",
+      "default": false,
+      "description": "True when answering needs the student's own data (a hold, a balance, an award). Out of scope until Phase 3, so these route today even where content exists."
+    },
+    "answer_guidance": {
+      "type": ["string", "null"],
+      "description": "What the bot may say before handing off. Kept short and specific."
+    },
+    "handoff_needs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What to collect from the student so the office doesn't have to ask. Populates the escalation card."
+    },
+    "urgency": {
+      "enum": ["routine", "time-sensitive", "crisis"],
+      "default": "routine",
+      "description": "crisis bypasses normal routing entirely and follows the crisis protocol."
+    },
+    "related_records": { "type": "array", "items": { "type": "string" } },
+    "data_quality_flags": {
+      "type": "array",
+      "items": { "enum": ["needs-owner-confirmation", "office-contact-unpopulated", "coverage-gap", "source-ambiguous"] }
+    }
+  }
+}

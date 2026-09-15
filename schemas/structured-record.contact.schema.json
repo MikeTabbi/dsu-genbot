@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/structured-record.contact.schema.json",
+  "title": "Contact Payload",
+  "description": "An office or person contact. Deliberately source-agnostic: a record scraped from a web page and a record imported from Entra ID / Microsoft Graph have the same shape, so the authoritative source can replace the stopgap without touching anything downstream.",
+  "type": "object",
+  "required": ["contact_type", "display_name", "channels", "source_authority"],
+  "additionalProperties": false,
+  "properties": {
+    "contact_type": {
+      "enum": ["office", "person", "queue"],
+      "description": "office = a department or unit (preferred for student-facing routing; stable, no personal data). person = a named individual. queue = a shared inbox or ticket queue."
+    },
+    "display_name": { "type": "string", "minLength": 2 },
+    "department": { "type": ["string", "null"] },
+    "job_title": { "type": ["string", "null"], "description": "person contacts only." },
+    "reports_to_office": {
+      "type": ["string", "null"],
+      "description": "id of the office contact this person sits in, so a person question can fall back to their office when the person record goes stale."
+    },
+    "channels": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "description": "At least one way to make contact. Absent fields mean 'not published', never 'none exists'.",
+      "properties": {
+        "email": { "type": ["string", "null"] },
+        "phone": { "type": ["string", "null"], "description": "E.164 or full dotted form, e.g. 302.857.6261. Never a bare extension." },
+        "phone_extension": { "type": ["string", "null"] },
+        "fax": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"] },
+        "ticket_url": { "type": ["string", "null"] },
+        "appointment_url": { "type": ["string", "null"] }
+      }
+    },
+    "location": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "building": { "type": ["string", "null"] },
+        "room": { "type": ["string", "null"] },
+        "campus": { "enum": ["dover", "wilmington", "georgetown", "online", "all"] },
+        "mailing_address": { "type": ["string", "null"] }
+      }
+    },
+    "hours": {
+      "type": ["string", "null"],
+      "description": "Published service hours. Left null rather than guessed -- office hours are a top-5 student question and a wrong answer sends someone across campus for nothing."
+    },
+    "serves_audience": {
+      "type": "array",
+      "items": { "enum": ["student", "faculty", "staff", "applicant", "parent", "public"] }
+    },
+    "source_authority": {
+      "enum": ["system-of-record", "cms-export", "web-scrape", "manually-verified"],
+      "description": "How this record was obtained. Drives trust and replacement order: a system-of-record import supersedes a web-scrape for the same subject. Surfaced to the student as a freshness caveat when it is 'web-scrape'."
+    },
+    "preferred_contact_note": {
+      "type": ["string", "null"],
+      "description": "Guidance the bot should pass along, e.g. 'email rather than phone for transcript requests'."
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What students call this office: 'the bursar', 'financial aid office', 'the registrar'. Official names are rarely what people search."
+    },
+    "do_not_publish": {
+      "type": "boolean",
+      "default": false,
+      "description": "Set true to keep a record in the repo but out of the index -- e.g. a direct line the person asked not to have surfaced. Enforced at retrieval, not by omission, so the decision is auditable."
+    },
+    "data_quality_flags": {
+      "type": "array",
+      "items": {
+        "enum": ["email-obfuscated-in-source", "malformed-source-row", "extension-only-no-full-number",
+                 "shared-phone-across-many-people", "no-hours-published", "extraction-uncertain",
+                 "needs-owner-confirmation", "superseded-pending", "office-contact-unpopulated"]
+      }
+    }
+  }
+}

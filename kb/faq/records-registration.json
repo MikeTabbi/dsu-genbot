@@ -1,0 +1,351 @@
+{
+  "collection": "faq-records-registration",
+  "discovery_card": {
+    "id": "card.faq-records-registration",
+    "text": "Common questions answered by the Office of Records & Registration at Delaware State University: registration and late registration, adding and dropping courses, withdrawing from a course or the University, audit status, Pass-Fail requests, transcripts, enrollment verification, grades, incompletes, and graduation applications.",
+    "answered_by_tool": null,
+    "note": "Class C: matched on question embedding with a high similarity floor. A near-miss is worse than no match, because the answer is returned close to verbatim and reads as authoritative."
+  },
+  "retrieval_config": {
+    "similarity_floor": 0.82,
+    "on_below_floor": "fall through to prose/structured retrieval, then escalate",
+    "embed_fields": [
+      "question",
+      "paraphrases"
+    ]
+  },
+  "ingest_summary": {
+    "pairs": 5,
+    "thin_paraphrase_coverage": [],
+    "note": "Paraphrase coverage is where containment rate comes from. Pairs with fewer than 4 paraphrases will under-match real student phrasings."
+  },
+  "records": [
+    {
+      "id": "faq.faq-records-registration.drop-vs-withdraw",
+      "kb_class": "qa-pair",
+      "collection": "faq-records-registration",
+      "payload": {
+        "question": "What is the difference between dropping a class and withdrawing from a class?",
+        "answer": "They're different actions with different consequences. Dropping happens early: through {{ref:cal.fall2026.main.last-day-add-drop}} you can drop a course with no financial penalty and nothing appears on your transcript. Withdrawing happens later, up through {{ref:cal.fall2026.main.last-day-withdraw}}, and it puts a grade of W on your transcript plus a $10 processing fee per course. Refunds depend on the date \u2014 I can work that out for you if you tell me when you're planning to do it.",
+        "paraphrases": [
+          "difference between dropping and withdrawing",
+          "is dropping a class the same as withdrawing",
+          "will dropping a class show on my transcript",
+          "what does a W mean on my transcript",
+          "should I drop or withdraw",
+          "drop vs withdraw deadline"
+        ],
+        "references": [
+          "cal.fall2026.main.last-day-add-drop",
+          "cal.fall2026.main.last-day-withdraw",
+          "ref.refund-schedule.fall-spring"
+        ],
+        "escalation_hint": "If the student is asking because of a medical or personal hardship, offer Advisement rather than answering procedurally.",
+        "never_answer_if": [
+          "student mentions a registration hold on their account",
+          "student asks how a withdrawal affects their financial aid award",
+          "student is in an accelerated session (deadlines differ - call the calendar tool instead)"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "Records & Registration FAQ",
+        "uri": "https://www.desu.edu/academics/records-registration",
+        "source_updated": "2026-08-26",
+        "locator": "What is the difference between dropping a class and withdraw"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "derived"
+      },
+      "temporal": {
+        "effective_from": "2026-08-26",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": "2026-08-26",
+        "next_due": "2026-12-01",
+        "reviewed_by": "Registrar's Office KB Liaison"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/academics/records-registration"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:c465b4ceddcdaa6cd8929a234e2343b8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "faq.faq-records-registration.missed-add-drop",
+      "kb_class": "qa-pair",
+      "collection": "faq-records-registration",
+      "payload": {
+        "question": "I missed the add/drop deadline. Can I still change my schedule?",
+        "answer": "The add/drop deadline for the main fall semester was {{ref:cal.fall2026.main.last-day-add-drop}}, so a no-penalty schedule change isn't available anymore. You may still be able to withdraw from the course \u2014 that's open through {{ref:cal.fall2026.main.last-day-withdraw}} and results in a W on your transcript plus a $10 fee. Whether that's the right move depends on your aid, your full-time status, and your program, so I'd rather connect you with Records & Registration than guess.",
+        "paraphrases": [
+          "I missed the add drop deadline",
+          "can I still change my schedule",
+          "too late to drop a class",
+          "missed the deadline to drop",
+          "can I get an exception to the drop deadline"
+        ],
+        "references": [
+          "cal.fall2026.main.last-day-add-drop",
+          "cal.fall2026.main.last-day-withdraw"
+        ],
+        "escalation_hint": "Always offer the Records & Registration handoff - exceptions are case-by-case and not documented in the KB.",
+        "never_answer_if": [
+          "student asks whether an exception will be granted",
+          "student mentions financial aid consequences"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "Records & Registration FAQ",
+        "uri": "https://www.desu.edu/academics/records-registration",
+        "source_updated": "2026-08-26",
+        "locator": "I missed the add/drop deadline. Can I still change my schedu"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "derived"
+      },
+      "temporal": {
+        "effective_from": "2026-08-26",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": "2026-08-26",
+        "next_due": "2026-12-01",
+        "reviewed_by": "Registrar's Office KB Liaison"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/academics/records-registration"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:1e811cb12e5fef8eed1262fb5de9e308",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "faq.faq-records-registration.pass-fail",
+      "kb_class": "qa-pair",
+      "collection": "faq-records-registration",
+      "payload": {
+        "question": "How do I request Pass-Fail grading for a course?",
+        "answer": "Pass-Fail requests for fall courses are due by {{ref:cal.fall2026.main.last-day-withdraw}} \u2014 the same date as the withdrawal deadline. The eligibility rules (which courses qualify, how many you may take, how it affects your GPA and major requirements) live in the academic catalog rather than the calendar, and they're specific enough that I don't want to summarize them. Want me to send this to Records & Registration with your course details?",
+        "paraphrases": [
+          "how do I take a class pass fail",
+          "pass fail deadline",
+          "can I switch to pass fail",
+          "does pass fail affect my GPA",
+          "pass/fail request form"
+        ],
+        "references": [
+          "cal.fall2026.main.last-day-withdraw"
+        ],
+        "escalation_hint": "Catalog policy is Class B content; if the catalog is indexed, cite it. Until then, escalate.",
+        "never_answer_if": [
+          "student asks whether a specific course is eligible",
+          "student asks how it affects their major or graduation requirements"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "Records & Registration FAQ",
+        "uri": "https://www.desu.edu/academics/records-registration",
+        "source_updated": "2026-08-26",
+        "locator": "How do I request Pass-Fail grading for a course?"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "derived"
+      },
+      "temporal": {
+        "effective_from": "2026-08-26",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": "2026-08-26",
+        "next_due": "2026-12-01",
+        "reviewed_by": "Registrar's Office KB Liaison"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/academics/records-registration"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:261653fb6285434ff2cc2b42c73a586f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "faq.faq-records-registration.graduation-application",
+      "kb_class": "qa-pair",
+      "collection": "faq-records-registration",
+      "payload": {
+        "question": "When do I need to apply for graduation?",
+        "answer": "The application and audit for December and May graduates are due {{ref:cal.fall2026.main.graduation-application-due}}. If you're graduating in December, you also have an exit interview on {{ref:cal.fall2026.main.december-graduate-exit-interview}}. Missing the application deadline usually means moving to the next graduation cycle, so if you're close to the date it's worth contacting Records & Registration directly.",
+        "paraphrases": [
+          "when do I apply for graduation",
+          "graduation application deadline",
+          "how do I apply to graduate",
+          "am I too late to apply for graduation",
+          "senior audit deadline"
+        ],
+        "references": [
+          "cal.fall2026.main.graduation-application-due",
+          "cal.fall2026.main.december-graduate-exit-interview"
+        ],
+        "escalation_hint": "Degree audit questions are always an escalation - the bot has no access to the student's progress in Phase 1.",
+        "never_answer_if": [
+          "student asks whether they have met their degree requirements",
+          "student asks about their own credit count or GPA"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "Records & Registration FAQ",
+        "uri": "https://www.desu.edu/academics/records-registration",
+        "source_updated": "2026-08-26",
+        "locator": "When do I need to apply for graduation?"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "derived"
+      },
+      "temporal": {
+        "effective_from": "2026-08-26",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": "2026-08-26",
+        "next_due": "2026-12-01",
+        "reviewed_by": "Registrar's Office KB Liaison"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/academics/records-registration"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:e83f00a7275305918aa995dcd32c9615",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "faq.faq-records-registration.late-registration",
+      "kb_class": "qa-pair",
+      "collection": "faq-records-registration",
+      "payload": {
+        "question": "Classes already started. Can I still register?",
+        "answer": "Late registration for the main fall semester opened {{ref:cal.fall2026.main.late-registration-begins}}, so it may still be possible depending on the course and how far into the term we are. Instructor and department approval is often needed, and a registration hold would block it. Tell me the course and I'll send this to Records & Registration \u2014 they can see your account and I can't.",
+        "paraphrases": [
+          "can I still register for classes",
+          "late registration",
+          "is it too late to add a class",
+          "register after classes started",
+          "how do I add a class late"
+        ],
+        "references": [
+          "cal.fall2026.main.late-registration-begins",
+          "cal.fall2026.main.last-day-add-drop"
+        ],
+        "escalation_hint": "Escalate by default - approval and holds are account-specific.",
+        "never_answer_if": [
+          "student asks whether they personally have a hold",
+          "student asks whether a specific section has open seats"
+        ]
+      },
+      "source": {
+        "type": "authored",
+        "title": "Records & Registration FAQ",
+        "uri": "https://www.desu.edu/academics/records-registration",
+        "source_updated": "2026-08-26",
+        "locator": "Classes already started. Can I still register?"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student"
+        ],
+        "authority": "derived"
+      },
+      "temporal": {
+        "effective_from": "2026-08-26",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": "2026-08-26",
+        "next_due": "2026-12-01",
+        "reviewed_by": "Registrar's Office KB Liaison"
+      },
+      "citation": {
+        "label": "Records & Registration, Delaware State University",
+        "url": "https://www.desu.edu/academics/records-registration"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "manual-authoring",
+        "content_hash": "sha256:3dc8066ce83b8a6732d67278baa147c9",
+        "validation_status": "unvalidated"
+      }
+    }
+  ]
+}

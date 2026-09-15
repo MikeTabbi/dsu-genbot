@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/structured-record.calendar.schema.json",
+  "title": "Calendar Event Payload",
+  "description": "Payload for a single academic calendar event. Retrieved by deterministic tool call, never by semantic search.",
+  "type": "object",
+  "required": ["title", "session", "event_type", "date_start", "affects_classes", "student_action_required"],
+  "additionalProperties": false,
+  "properties": {
+    "title": { "type": "string", "minLength": 3 },
+    "session": {
+      "enum": ["main", "accelerated-1", "accelerated-2", "winter", "all"],
+      "description": "REQUIRED. The single most important disambiguator -- three concurrent sessions have different deadlines for the same action."
+    },
+    "campus": {
+      "type": "array",
+      "items": { "enum": ["dover", "wilmington", "georgetown", "online", "all"] },
+      "default": ["all"]
+    },
+    "event_type": {
+      "enum": ["deadline", "closure", "instruction-period", "registration", "ceremony", "housing", "payment", "grading", "evaluation", "administrative", "recess"]
+    },
+    "date_start": { "type": "string", "format": "date" },
+    "date_end": { "type": ["string", "null"], "format": "date", "description": "Inclusive. null for single-day events." },
+    "weekday_as_published": {
+      "type": ["string", "null"],
+      "description": "Weekday exactly as printed in the source. Cross-checked against the real date by the validation gate to catch transcription errors."
+    },
+    "time": { "type": ["string", "null"], "description": "e.g. '08:00' or '17:00'. null when the source gives none." },
+    "affects_classes": {
+      "enum": ["yes", "no", "partial", "unstated", "not-applicable"],
+      "description": "Do classes meet? 'unstated' is a first-class value -- it triggers a known-unknown response and an escalation offer rather than an inference."
+    },
+    "student_action_required": {
+      "type": "boolean",
+      "description": "True when a student must DO something by this date. Drives answer prioritization and Phase 4 nudges."
+    },
+    "action_summary": { "type": ["string", "null"], "description": "One line: what the student must do." },
+    "related_fee": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "amount_usd": { "type": "number" },
+        "description": { "type": "string" }
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Student phrasings for this event: 'first day of school', 'when does the dorm open'. Feeds tool-side keyword matching."
+    },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ids of other records that qualify this one (e.g. the refund schedule for a withdrawal deadline)."
+    },
+    "notes": { "type": ["string", "null"], "description": "Source caveats, verbatim where possible." },
+    "data_quality_flags": {
+      "type": "array",
+      "items": { "enum": ["source-ambiguous", "source-contradiction", "source-typo", "listed-out-of-order", "coverage-gap", "needs-owner-confirmation"] },
+      "description": "Surfaces into the data-quality report for the owning office. Non-empty means passed-with-warnings at best."
+    }
+  }
+}

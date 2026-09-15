@@ -1,0 +1,120 @@
+{
+  "collection": "faq-records-registration",
+  "authored_on": "2026-08-26",
+  "effective_to": "2027-01-31",
+  "next_review_due": "2026-12-01",
+  "discovery_text": "Common questions answered by the Office of Records & Registration at Delaware State University: registration and late registration, adding and dropping courses, withdrawing from a course or the University, audit status, Pass-Fail requests, transcripts, enrollment verification, grades, incompletes, and graduation applications.",
+  "department_meta": {
+    "department": "Records & Registration",
+    "liaison_role": "Registrar's Office KB Liaison",
+    "escalation_queue": "records-registration",
+    "uri": "https://www.desu.edu/academics/records-registration"
+  },
+  "qa": [
+    {
+      "id": "drop-vs-withdraw",
+      "question": "What is the difference between dropping a class and withdrawing from a class?",
+      "answer": "They're different actions with different consequences. Dropping happens early: through {{ref:cal.fall2026.main.last-day-add-drop}} you can drop a course with no financial penalty and nothing appears on your transcript. Withdrawing happens later, up through {{ref:cal.fall2026.main.last-day-withdraw}}, and it puts a grade of W on your transcript plus a $10 processing fee per course. Refunds depend on the date — I can work that out for you if you tell me when you're planning to do it.",
+      "paraphrases": [
+        "difference between dropping and withdrawing",
+        "is dropping a class the same as withdrawing",
+        "will dropping a class show on my transcript",
+        "what does a W mean on my transcript",
+        "should I drop or withdraw",
+        "drop vs withdraw deadline"
+      ],
+      "references": [
+        "cal.fall2026.main.last-day-add-drop",
+        "cal.fall2026.main.last-day-withdraw",
+        "ref.refund-schedule.fall-spring"
+      ],
+      "escalation_hint": "If the student is asking because of a medical or personal hardship, offer Advisement rather than answering procedurally.",
+      "never_answer_if": [
+        "student mentions a registration hold on their account",
+        "student asks how a withdrawal affects their financial aid award",
+        "student is in an accelerated session (deadlines differ - call the calendar tool instead)"
+      ]
+    },
+    {
+      "id": "missed-add-drop",
+      "question": "I missed the add/drop deadline. Can I still change my schedule?",
+      "answer": "The add/drop deadline for the main fall semester was {{ref:cal.fall2026.main.last-day-add-drop}}, so a no-penalty schedule change isn't available anymore. You may still be able to withdraw from the course — that's open through {{ref:cal.fall2026.main.last-day-withdraw}} and results in a W on your transcript plus a $10 fee. Whether that's the right move depends on your aid, your full-time status, and your program, so I'd rather connect you with Records & Registration than guess.",
+      "paraphrases": [
+        "I missed the add drop deadline",
+        "can I still change my schedule",
+        "too late to drop a class",
+        "missed the deadline to drop",
+        "can I get an exception to the drop deadline"
+      ],
+      "references": [
+        "cal.fall2026.main.last-day-add-drop",
+        "cal.fall2026.main.last-day-withdraw"
+      ],
+      "escalation_hint": "Always offer the Records & Registration handoff - exceptions are case-by-case and not documented in the KB.",
+      "never_answer_if": [
+        "student asks whether an exception will be granted",
+        "student mentions financial aid consequences"
+      ]
+    },
+    {
+      "id": "pass-fail",
+      "question": "How do I request Pass-Fail grading for a course?",
+      "answer": "Pass-Fail requests for fall courses are due by {{ref:cal.fall2026.main.last-day-withdraw}} — the same date as the withdrawal deadline. The eligibility rules (which courses qualify, how many you may take, how it affects your GPA and major requirements) live in the academic catalog rather than the calendar, and they're specific enough that I don't want to summarize them. Want me to send this to Records & Registration with your course details?",
+      "paraphrases": [
+        "how do I take a class pass fail",
+        "pass fail deadline",
+        "can I switch to pass fail",
+        "does pass fail affect my GPA",
+        "pass/fail request form"
+      ],
+      "references": ["cal.fall2026.main.last-day-withdraw"],
+      "escalation_hint": "Catalog policy is Class B content; if the catalog is indexed, cite it. Until then, escalate.",
+      "never_answer_if": [
+        "student asks whether a specific course is eligible",
+        "student asks how it affects their major or graduation requirements"
+      ]
+    },
+    {
+      "id": "graduation-application",
+      "question": "When do I need to apply for graduation?",
+      "answer": "The application and audit for December and May graduates are due {{ref:cal.fall2026.main.graduation-application-due}}. If you're graduating in December, you also have an exit interview on {{ref:cal.fall2026.main.december-graduate-exit-interview}}. Missing the application deadline usually means moving to the next graduation cycle, so if you're close to the date it's worth contacting Records & Registration directly.",
+      "paraphrases": [
+        "when do I apply for graduation",
+        "graduation application deadline",
+        "how do I apply to graduate",
+        "am I too late to apply for graduation",
+        "senior audit deadline"
+      ],
+      "references": [
+        "cal.fall2026.main.graduation-application-due",
+        "cal.fall2026.main.december-graduate-exit-interview"
+      ],
+      "escalation_hint": "Degree audit questions are always an escalation - the bot has no access to the student's progress in Phase 1.",
+      "never_answer_if": [
+        "student asks whether they have met their degree requirements",
+        "student asks about their own credit count or GPA"
+      ]
+    },
+    {
+      "id": "late-registration",
+      "question": "Classes already started. Can I still register?",
+      "answer": "Late registration for the main fall semester opened {{ref:cal.fall2026.main.late-registration-begins}}, so it may still be possible depending on the course and how far into the term we are. Instructor and department approval is often needed, and a registration hold would block it. Tell me the course and I'll send this to Records & Registration — they can see your account and I can't.",
+      "paraphrases": [
+        "can I still register for classes",
+        "late registration",
+        "is it too late to add a class",
+        "register after classes started",
+        "how do I add a class late"
+      ],
+      "references": [
+        "cal.fall2026.main.late-registration-begins",
+        "cal.fall2026.main.last-day-add-drop"
+      ],
+      "escalation_hint": "Escalate by default - approval and holds are account-specific.",
+      "never_answer_if": [
+        "student asks whether they personally have a hold",
+        "student asks whether a specific section has open seats"
+      ]
+    }
+  ]
+}

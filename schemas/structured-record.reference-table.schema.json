@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/structured-record.reference-table.schema.json",
+  "title": "Reference Table Payload",
+  "description": "An ordered rule list (refund tiers, fee schedules, routing tables). Queried by a function that takes the student's inputs and returns their specific outcome. Never returned to the user as a raw table to interpret.",
+  "type": "object",
+  "required": ["title", "applies_to", "input_spec", "rules"],
+  "additionalProperties": false,
+  "properties": {
+    "title": { "type": "string", "minLength": 3 },
+    "applies_to": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["main", "accelerated-1", "accelerated-2", "winter", "summer", "all"] }
+    },
+    "input_spec": {
+      "type": "array",
+      "minItems": 1,
+      "description": "What the caller must supply to evaluate the rules.",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "enum": ["integer", "number", "string", "date", "boolean"] },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Evaluated in order; first match wins. Boundaries must be explicit and non-overlapping -- overlapping ranges are a validation failure, because they are how a published table silently contradicts itself.",
+      "items": {
+        "type": "object",
+        "required": ["label", "condition", "outcome"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "description": "Verbatim row label from the source where one exists." },
+          "condition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "field": { "type": "string" },
+              "op": { "enum": ["<=", "<", ">=", ">", "==", "between", "always"] },
+              "value": {},
+              "value_max": {}
+            }
+          },
+          "outcome": { "type": "object", "description": "Result values, e.g. {tuition_refund_pct: 80, fees_refund_pct: 0}" },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "boundary_basis": {
+      "type": ["string", "null"],
+      "description": "What the day counts are measured from, stated unambiguously. Published tables routinely omit this, and it changes the answer."
+    },
+    "data_quality_flags": {
+      "type": "array",
+      "items": { "enum": ["source-ambiguous", "source-contradiction", "overlapping-rules", "undefined-boundary-basis", "needs-owner-confirmation"] }
+    }
+  }
+}

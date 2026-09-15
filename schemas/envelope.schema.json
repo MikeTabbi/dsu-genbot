@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://desu.edu/kb/schemas/envelope.schema.json",
+  "title": "DSU KB Universal Envelope",
+  "description": "Metadata carried by every knowledge base record regardless of content class. Authored payloads vary; this envelope does not.",
+  "type": "object",
+  "required": ["id", "kb_class", "collection", "payload", "source", "owner", "governance", "temporal", "review", "citation"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(\\.[a-z0-9-]+)+$",
+      "description": "Stable dotted identifier. Never reused, never renumbered. Referenced by {{ref:id}} from other records."
+    },
+    "kb_class": {
+      "enum": ["structured-record", "prose", "qa-pair"],
+      "description": "Determines the retrieval path. web-synced is a source type, not a class -- it resolves into one of these at ingest."
+    },
+    "collection": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Groups records that share a discovery card and, for Class A, a tool."
+    },
+    "payload": {
+      "type": "object",
+      "description": "Class-specific content. Validated against the matching payload schema."
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "title", "source_updated"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["pdf", "webpage", "docx", "xlsx", "authored", "ticket-derived", "banner"] },
+        "title": { "type": "string", "minLength": 3 },
+        "uri": { "type": "string", "description": "Canonical public location. Absent only for internally authored content." },
+        "source_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the SOURCE was last revised (e.g. the 'UPDATED:' stamp on a calendar PDF) -- not the ingest date."
+        },
+        "locator": { "type": "string", "description": "Page, section, or heading path within the source, for human verification." }
+      }
+    },
+    "owner": {
+      "type": "object",
+      "required": ["department", "escalation_queue"],
+      "additionalProperties": false,
+      "properties": {
+        "department": { "type": "string", "minLength": 2 },
+        "liaison_role": { "type": "string", "description": "Role, not a person's name -- roles outlive staffing." },
+        "escalation_queue": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Where an unanswerable question about this record is routed."
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["data_tier", "audience", "authority"],
+      "additionalProperties": false,
+      "properties": {
+        "data_tier": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3,
+          "description": "Four-tier model from the implementation plan. Phase 1 admits tier 0 only. Tier 3 must never be indexed."
+        },
+        "audience": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "enum": ["student", "faculty", "staff", "applicant", "parent", "public"] },
+          "description": "Enforced as a retrieval filter against verified SSO claims, server-side."
+        },
+        "authority": {
+          "enum": ["authoritative", "derived"],
+          "description": "authoritative = the office of record's own content. derived = summary/rewrite. On conflict, authoritative wins."
+        }
+      }
+    },
+    "temporal": {
+      "type": "object",
+      "required": ["effective_from"],
+      "additionalProperties": false,
+      "properties": {
+        "effective_from": { "type": "string", "format": "date" },
+        "effective_to": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Hard retrieval cutoff. Expired records are not returned at all. null requires justification in notes."
+        },
+        "supersedes": { "type": ["string", "null"], "description": "id of the record this replaces." }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["cadence", "next_due"],
+      "additionalProperties": false,
+      "properties": {
+        "cadence": { "enum": ["per-term", "annual", "semiannual", "quarterly", "on-change"] },
+        "last_reviewed": { "type": ["string", "null"], "format": "date" },
+        "next_due": { "type": "string", "format": "date" },
+        "reviewed_by": {
+          "type": ["string", "null"],
+          "description": "Liaison role that signed off. 'pending-liaison-signoff' blocks launch but not indexing."
+        }
+      }
+    },
+    "citation": {
+      "type": "object",
+      "required": ["label"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 5, "description": "Human-facing attribution shown with the answer." },
+        "url": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ingested_at": { "type": "string" },
+        "ingest_method": { "enum": ["assisted-extraction", "manual-authoring", "automated-sync", "api"] },
+        "content_hash": { "type": "string" },
+        "validation_status": { "enum": ["passed", "passed-with-warnings", "failed", "unvalidated"] }
+      }
+    }
+  }
+}

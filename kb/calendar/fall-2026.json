@@ -1,0 +1,5565 @@
+{
+  "collection": "academic-calendar",
+  "term": "Fall 2026",
+  "term_code": "202701",
+  "discovery_card": {
+    "id": "card.academic-calendar",
+    "text": "Academic calendar dates and deadlines for Delaware State University: semester start and end dates, add/drop and withdrawal deadlines, registration and advisement periods, holidays and university closures, final exam schedules, grade due dates, residence hall open and close dates, and payment due dates. Covers the main semester and the 8-week accelerated sessions at the Dover, Wilmington, and Georgetown campuses.",
+    "answered_by_tool": "academic_calendar",
+    "note": "This card is embedded for semantic discovery; the records below are not. Retrieval matches the card, the card routes to the tool, the tool returns the fact."
+  },
+  "session_meta": {
+    "main": {
+      "label": "Main Fall Semester",
+      "first_day_of_instruction": "2026-08-25",
+      "last_day_of_classes": "2026-12-03",
+      "last_day_to_add": "2026-09-03",
+      "refund_table": "ref.refund-schedule.fall-spring"
+    },
+    "accelerated-1": {
+      "label": "Accelerated Session I (8 weeks)",
+      "first_day_of_instruction": "2026-08-25",
+      "last_day_of_classes": "2026-10-16",
+      "last_day_to_add": "2026-09-03",
+      "refund_table": "ref.refund-schedule.accelerated"
+    },
+    "accelerated-2": {
+      "label": "Accelerated Session II (8 weeks)",
+      "first_day_of_instruction": "2026-10-19",
+      "last_day_of_classes": "2026-12-11",
+      "last_day_to_add": "2026-10-22",
+      "refund_table": "ref.refund-schedule.accelerated"
+    }
+  },
+  "records": [
+    {
+      "id": "cal.fall2026.main.fall-payment-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Fall Payment Due Date",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "payment",
+        "date_start": "2026-08-06",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Fall semester tuition and fees must be paid or a payment plan in place.",
+        "related_fee": null,
+        "aliases": [
+          "when is tuition due",
+          "fall payment deadline",
+          "when do I have to pay for fall"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:82c8c8cf1e845a1d2f5ebf97530509fb",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residence-halls-open",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residence Halls Open for All Students",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "housing",
+        "date_start": "2026-08-19",
+        "date_end": "2026-08-22",
+        "weekday_as_published": "Wednesday-Saturday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when can I move in",
+          "dorm move in",
+          "when do the dorms open",
+          "residence hall opening"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:9ab406c19dfbb6864fb9bbfff9956415",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.welcome-days",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Welcome Days",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-08-20",
+        "date_end": "2026-08-23",
+        "weekday_as_published": "Thursday-Sunday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "welcome week",
+          "new student welcome",
+          "orientation events"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:efdf399f318c3ec5d174f421666818ee",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.i-love-dsu-week",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "I Love DSU Week",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-08-23",
+        "date_end": "2026-08-29",
+        "weekday_as_published": "Sunday-Saturday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "I love DSU week",
+          "spirit week"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:54e3501f4a7423861b63b9abfb87fc54",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.classes-begin",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Classes Begin",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-08-25",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": "08:00",
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "first day of classes",
+          "when does school start",
+          "when does the semester start",
+          "first day of school",
+          "when do classes begin"
+        ],
+        "references": [],
+        "notes": "Classes begin at 8:00 am.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:ee2bab9d1aedbaa04a49f7095a767ae3",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.late-registration-begins",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Late Registration Begins",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-08-25",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Students not yet registered may register late beginning this date.",
+        "related_fee": null,
+        "aliases": [
+          "late registration",
+          "can I still register",
+          "register after classes start"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:4aa3a1bbd222d23b27d14dd18f388e7f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.faculty-institute",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Faculty Institute",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-08-27",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "partial",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "faculty institute",
+          "do I have class August 27",
+          "no morning classes"
+        ],
+        "references": [],
+        "notes": "No morning classes held; evening classes only.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:61692c02916280f1009e993b3493b097",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.last-day-add-drop",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Add and Drop Courses (without financial penalty)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-03",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to add or drop a course with no financial penalty and no W on the transcript.",
+        "related_fee": null,
+        "aliases": [
+          "add drop deadline",
+          "last day to drop a class",
+          "can I still drop a class",
+          "drop without penalty",
+          "last day to add a class",
+          "schedule change deadline"
+        ],
+        "references": [
+          "ref.refund-schedule.fall-spring",
+          "cal.fall2026.main.drop-fee-effective"
+        ],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:b1c031523d50860f32bb2f2133ecd3ac",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.last-day-audit-change",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Change Course(s) to Audit Status",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-03",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Last day to switch a course to audit status.",
+        "related_fee": null,
+        "aliases": [
+          "audit a class",
+          "change to audit",
+          "audit deadline"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:e1490a885abea7b7953686ea0e7edd87",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.drop-fee-effective",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Effective Date for $10 Drop Processing Fee",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-04",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": {
+          "amount_usd": 10,
+          "description": "$10 processing fee per dropped course"
+        },
+        "aliases": [
+          "drop fee",
+          "does it cost money to drop a class",
+          "$10 fee"
+        ],
+        "references": [
+          "ref.refund-schedule.fall-spring"
+        ],
+        "notes": "Source reads 'Effective Date for $10 drop processing fee)' with an unmatched parenthesis; text otherwise transcribed verbatim. Source directs readers to the Refund Schedule for financial responsibility on withdrawn courses.",
+        "data_quality_flags": [
+          "source-typo"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:33cfae8fc218729db671129a1432eec6",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.academic-student-success-committee",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Academic & Student Success Committee Meeting",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-03",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "academic committee meeting"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:28531ec08d3343cd20e00f55f376446b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.non-attendance-documentation",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Documentation for Non-Attendance Period",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-04",
+        "date_end": "2026-09-08",
+        "weekday_as_published": "Friday-Tuesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "non attendance",
+          "never attended",
+          "attendance documentation"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:70a7b17e31a14fe75b59dcc069b6592b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.labor-day",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Labor Day (University Closed)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "closure",
+        "date_start": "2026-09-07",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "labor day",
+          "is the university closed labor day",
+          "do we have class on labor day"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:9c0343e2ddeb80e5e29144806971bfb0",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.early-alert-period",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Academic Early Alert Period",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-07",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "early alert",
+          "academic alert"
+        ],
+        "references": [],
+        "notes": "Source lists a single start date with no end date for this period.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:99d53bae1c07b53408ba7809a44686ab",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.general-faculty-meeting",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "General Faculty Meeting",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-10",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "unstated",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "faculty meeting"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:bc111e0928e9913c6d87518fa02b23d5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.constitution-day",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Constitution Day (DSU Observed)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-09-11",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "unstated",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "constitution day",
+          "is the university closed constitution day",
+          "do I have class on constitution day"
+        ],
+        "references": [],
+        "notes": "Source says 'DSU Observed' but does not state whether classes meet or offices close.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:c2c719dde9a3e92e231b5a1842396092",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.convocation",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Convocation",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-09-15",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": null,
+        "affects_classes": "unstated",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "convocation",
+          "do I have class on convocation day",
+          "is convocation mandatory"
+        ],
+        "references": [],
+        "notes": "Source does not state whether classes are cancelled or attendance is expected.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:30deedf4a798bbc63f2489bc0df2ba13",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.graduation-application-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Application & Audit for December and May Graduates Due",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-18",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "December and May graduates must submit their graduation application and audit.",
+        "related_fee": null,
+        "aliases": [
+          "graduation application",
+          "apply to graduate",
+          "graduation deadline",
+          "how do I apply for graduation"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:f9d62a0ff3e094ec5769562383e5a8cc",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.midterm-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Evaluations Administered",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-10-05",
+        "date_end": "2026-10-09",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "midterms",
+          "midterm exams",
+          "when are midterms"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:33442ebbdd39b53b722b9254fe2db3e9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residency-status-audit",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residency Status Audit",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-10-07",
+        "date_end": null,
+        "weekday_as_published": "Wednesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "residency audit",
+          "in state residency"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:6fbcb20d27a703572459374d52ce825b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.last-day-remove-incompletes",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Remove Incompletes",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-10-08",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Last day to resolve an Incomplete grade from a prior term.",
+        "related_fee": null,
+        "aliases": [
+          "incomplete grade",
+          "remove an incomplete",
+          "I grade deadline"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:6655dea7cb887de1cda45c4813b391b5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.homecoming",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Homecoming",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-10-10",
+        "date_end": null,
+        "weekday_as_published": "Saturday",
+        "time": null,
+        "affects_classes": "unstated",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "homecoming",
+          "when is homecoming"
+        ],
+        "references": [],
+        "notes": "Source does not state associated closures or schedule changes.",
+        "data_quality_flags": [
+          "source-ambiguous"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:4009cf42ef15895d9ff9cbf6cc8a7aa7",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.midterm-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Grades Due",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-10-12",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "midterm grades",
+          "when will I get midterm grades"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:ee80186211c55a1d1bccd10365877c3b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.advisement-period",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Academic Advisement Period",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-10-12",
+        "date_end": "2026-11-18",
+        "weekday_as_published": "Monday-Wednesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Meet with your academic advisor before registering for spring.",
+        "related_fee": null,
+        "aliases": [
+          "advisement",
+          "see my advisor",
+          "advising period",
+          "academic advising"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:4b3495627479da66d5fd1591b6019db8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.priority-pre-registration",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Priority Pre-Registration",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-10-19",
+        "date_end": "2026-10-20",
+        "weekday_as_published": "Monday-Tuesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Eligible students may register for spring/summer first.",
+        "related_fee": null,
+        "aliases": [
+          "priority registration",
+          "early registration"
+        ],
+        "references": [],
+        "notes": "Source does not state eligibility criteria for priority status.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:dc9a50026d40eb0701834c9d517bc576",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.pre-registration-spring-summer",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Pre-Registration for Spring & Summer",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-10-21",
+        "date_end": "2026-11-18",
+        "weekday_as_published": "Wednesday-Wednesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Register for spring and summer courses.",
+        "related_fee": null,
+        "aliases": [
+          "spring registration",
+          "when can I register for spring",
+          "summer registration",
+          "registration opens"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:aa7e9febe79451648ed65949411ac1e9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.census-date",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Census Date",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-10-30",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "census date",
+          "enrollment census"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0d3fc65cd5aa85ac57b62282353c7b88",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.election-day",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Election Day (University Closed)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "closure",
+        "date_start": "2026-11-03",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "election day",
+          "is the university closed election day"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:34dd7cbb9701ffa3b4f39cf40856aab4",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.open-house",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Open House",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "ceremony",
+        "date_start": "2026-11-07",
+        "date_end": null,
+        "weekday_as_published": "Saturday",
+        "time": null,
+        "affects_classes": "unstated",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "open house",
+          "campus visit day"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:cb8cfef1cba23c0c6359713ae31a2874",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.fall-course-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Fall Course Evaluations",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-11-16",
+        "date_end": "2026-12-03",
+        "weekday_as_published": "Monday-Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Complete course evaluations for your fall courses.",
+        "related_fee": null,
+        "aliases": [
+          "course evaluations",
+          "evaluate my professor",
+          "student evaluations"
+        ],
+        "references": [],
+        "notes": "Printed out of chronological order in the source (listed between Nov 7 and Nov 11).",
+        "data_quality_flags": [
+          "listed-out-of-order"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:3fd86e370bbbe0fbb9417ffc116b3c5b",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.last-day-withdraw",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Withdraw from Course(s) / University; Last Day to Submit Pass-Fail Request",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-11-11",
+        "date_end": null,
+        "weekday_as_published": "Wednesday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to withdraw from a course or from the University, and last day to request Pass-Fail grading for a fall course.",
+        "related_fee": null,
+        "aliases": [
+          "withdrawal deadline",
+          "last day to withdraw",
+          "can I still withdraw",
+          "pass fail deadline",
+          "drop with a W",
+          "last day to drop with a W"
+        ],
+        "references": [
+          "ref.refund-schedule.fall-spring"
+        ],
+        "notes": "Source directs readers to the academic catalog for the Pass-Fail policy.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:49283f257406000dcf0d49e9277db2b5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.december-graduate-exit-interview",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Exit Interview for December Graduates",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-11-15",
+        "date_end": null,
+        "weekday_as_published": "Sunday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "December graduates must complete their exit interview.",
+        "related_fee": null,
+        "aliases": [
+          "exit interview",
+          "graduating in December"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:ed2799b1424bc4e0eed5e53a557406db",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residence-halls-close-thanksgiving",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residence Halls Close for Thanksgiving",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "housing",
+        "date_start": "2026-11-25",
+        "date_end": null,
+        "weekday_as_published": "Wednesday",
+        "time": "17:00",
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "do the dorms close for thanksgiving",
+          "residence halls thanksgiving",
+          "when do I have to leave for thanksgiving"
+        ],
+        "references": [],
+        "notes": "Residence halls close at 5:00 pm.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:d580bd782a12dc452496b8eede6e5318",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.thanksgiving-recess",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Thanksgiving Recess",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "recess",
+        "date_start": "2026-11-26",
+        "date_end": "2026-11-29",
+        "weekday_as_published": "Thursday-Sunday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "thanksgiving break",
+          "thanksgiving recess",
+          "when is thanksgiving break"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:dd24293f83df1cf28d0bfb73921fc7dd",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residence-halls-reopen",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residence Halls Re-Open for the Remainder of Fall Semester",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "housing",
+        "date_start": "2026-11-29",
+        "date_end": null,
+        "weekday_as_published": "Sunday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when do the dorms reopen",
+          "come back after thanksgiving"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:691907ff22ed4705305f51d27e4d4712",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.last-day-of-classes",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day of Classes",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-12-03",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "last day of classes",
+          "when does the semester end",
+          "when do classes end"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:cab23f3be04b8fb2bd5a1095d38a28e0",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.reading-day",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Reading Day",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-12-04",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "reading day",
+          "study day"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:4070dae2d2253bd45c12334103f6e4a8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residency-status-final-audit",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residency Status Final Audit",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-12-04",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "final residency audit"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0bdf939990092141f7afc146f1250382",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.final-examinations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Examinations",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-12-07",
+        "date_end": "2026-12-11",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "finals",
+          "final exams",
+          "when are finals",
+          "exam week",
+          "finals week"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:45abfe6129ce7197ddfe6c49d06d1ea9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.winter-recess-students",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Winter Recess Begins (Students)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "recess",
+        "date_start": "2026-12-11",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "winter break",
+          "when does winter break start",
+          "christmas break"
+        ],
+        "references": [],
+        "notes": "Distinct from the University closure of Dec 24 - Jan 1: the University remains open for business between these dates.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:f29d21fe2776f46261e98c45a1e3d248",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.residence-halls-close-winter",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Residence Halls Close for Winter Recess",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "housing",
+        "date_start": "2026-12-11",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": "17:00",
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when do the dorms close for winter",
+          "move out for winter break"
+        ],
+        "references": [],
+        "notes": "Residence halls close at 5:00 pm.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:8e7305c9547b608e9d6be830e6f2e54c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.final-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Grades Due",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-12-14",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "final grades",
+          "when will I get my grades",
+          "when are grades posted"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:1fa5850582850f76f37be7fcdc0e95e8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.spring-new-student-orientation",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Spring New Student Orientation (Virtual)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-12-15",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "spring orientation",
+          "new student orientation"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:4bdf7dbf01792c17af6053ec4c2e26ba",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.main.winter-recess-closure",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Winter Recess (University Closed)",
+        "session": "main",
+        "campus": [
+          "all"
+        ],
+        "event_type": "closure",
+        "date_start": "2026-12-24",
+        "date_end": "2027-01-01",
+        "weekday_as_published": "Thursday-Friday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "is the university closed for the holidays",
+          "winter closure",
+          "christmas closure",
+          "holiday break"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:2a20efe8bc15b87327ab5d3f8b850ec8",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.winter.winter-payment-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Winter Payment Due Date",
+        "session": "winter",
+        "campus": [
+          "all"
+        ],
+        "event_type": "payment",
+        "date_start": "2026-12-07",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Winter session tuition and fees due.",
+        "related_fee": null,
+        "aliases": [
+          "winter session payment",
+          "when is winter tuition due"
+        ],
+        "references": [],
+        "notes": "Printed on the Fall 2026 calendar out of chronological order (listed after December 11 entries). Applies to the winter session, not the fall semester.",
+        "data_quality_flags": [
+          "listed-out-of-order"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:52c2af1cebceaf548b67a40e0e0a9a88",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.session-dates",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Accelerated Session I",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-08-25",
+        "date_end": "2026-10-16",
+        "weekday_as_published": null,
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated session 1",
+          "8 week session 1",
+          "first 8 week session",
+          "accelerated I dates"
+        ],
+        "references": [],
+        "notes": "8-week accelerated session offered at the Dover, Wilmington, and Georgetown campuses.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:d935b1f3fe5fc836a213a8be34a63745",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.classes-begin",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Classes Begin",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-08-25",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": "08:00",
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when does accelerated 1 start",
+          "first day accelerated session 1"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:ba879978b6d6f03cf68946d384fbf513",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.late-registration-begins",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Late Registration Begins",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-08-25",
+        "date_end": null,
+        "weekday_as_published": "Tuesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Late registration for Accelerated Session I opens.",
+        "related_fee": null,
+        "aliases": [
+          "late registration accelerated 1"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:61f1655ee358f7eefc9faf4a25f94701",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.last-day-add-drop",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Add and Drop Courses (without financial penalty)",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-03",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to add or drop an Accelerated I course with no financial penalty.",
+        "related_fee": null,
+        "aliases": [
+          "add drop deadline accelerated 1",
+          "drop an accelerated class"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:89e0ad6b1f716a1641f55723b1deafd5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.withdraw-window-opens",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Withdrawal Period Begins ($10 fee per course, W on transcript)",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-04",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": {
+          "amount_usd": 10,
+          "description": "$10 fee for each withdrawn course"
+        },
+        "aliases": [
+          "withdraw from accelerated 1",
+          "W on transcript accelerated"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": "A grade of W will be placed on the transcript. Source directs readers to the Refund Schedule for financial responsibility.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:fa83e5422d14097a7ea1ee2246a7ca0f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.labor-day",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Labor Day Recess (University Closed)",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "closure",
+        "date_start": "2026-09-07",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "labor day accelerated"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:11044fa711ba88f9e8b1fe1305699405",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.early-alert-period",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Academic Early Alert Period",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-07",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": "Source lists a single start date with no end date.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:3a586146414ae6f59cc91cfb1e7696dd",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.non-attendance-documentation",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Documentation for Non-Attendance Period",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-09-08",
+        "date_end": "2026-09-09",
+        "weekday_as_published": "Tuesday-Wednesday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0ff6c1968844076d38a9357a066337d2",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.midterm-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Evaluations Administered",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-09-14",
+        "date_end": "2026-09-18",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 1 midterms",
+          "when are midterms accelerated"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:07db1c1b5505ea5e5d0be509b1a08ec9",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.midterm-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Grades Due",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-09-21",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:dd73ac34dc11eafb2e356dcd25882163",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.last-day-withdraw",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Withdraw from Accelerated I Course(s) / University; Last Day to Submit Pass-Fail Request",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-09-25",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to withdraw from an Accelerated I course or the University, and last day to request Pass-Fail grading for an Accelerated I course.",
+        "related_fee": null,
+        "aliases": [
+          "withdrawal deadline accelerated 1",
+          "last day to withdraw accelerated",
+          "pass fail accelerated 1"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": "Source directs readers to the academic catalog for the Pass-Fail policy.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:b3c57645af776befc077aaaa4e49338c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.course-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Accelerated I Fall Course Evaluations",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-10-05",
+        "date_end": "2026-10-16",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Complete course evaluations for Accelerated I courses.",
+        "related_fee": null,
+        "aliases": [
+          "course evaluations accelerated 1"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0b73f26e477de81927ecea5e860db4c5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.final-examinations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Examinations",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-10-12",
+        "date_end": "2026-10-16",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 1 finals",
+          "final exams accelerated session 1"
+        ],
+        "references": [],
+        "notes": "Source places the final examination period Oct 12-16 and the last day of classes on Oct 16, so the two overlap. Confirm the intended relationship.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:83033b21fc9930eedb867d87efe03f3f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.last-day-of-classes",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day of Classes",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-10-16",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when does accelerated 1 end",
+          "last day accelerated session 1"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:8bc86c1c0c52327f9e44fa6294907682",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-1.final-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Grades Due",
+        "session": "accelerated-1",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-10-19",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 1 grades"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:47deee37e0e3b8a5da2212895a75aada",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.session-dates",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Accelerated Session II",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-10-19",
+        "date_end": "2026-12-11",
+        "weekday_as_published": null,
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated session 2",
+          "8 week session 2",
+          "second 8 week session",
+          "accelerated II dates"
+        ],
+        "references": [],
+        "notes": "8-week accelerated session offered at the Dover, Wilmington, and Georgetown campuses.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:b3c3caeb855d13ad077abcd9dd43ee9f",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.classes-begin",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Classes Begin",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-10-19",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when does accelerated 2 start",
+          "first day accelerated session 2"
+        ],
+        "references": [],
+        "notes": "Source gives no start time for Accelerated II (Accelerated I specifies 8:00 am).",
+        "data_quality_flags": [
+          "source-ambiguous"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:ddce23d487cd1d85100b02bed6a9ddc5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.late-registration-begins",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Late Registration Begins",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "registration",
+        "date_start": "2026-10-19",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Late registration for Accelerated Session II opens.",
+        "related_fee": null,
+        "aliases": [
+          "late registration accelerated 2"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:cee7267ebf290fc22b175506e0bb2f7c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.last-day-add-drop",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Add and Drop Courses (without financial penalty)",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-10-22",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to add or drop an Accelerated II course with no financial penalty.",
+        "related_fee": null,
+        "aliases": [
+          "add drop deadline accelerated 2",
+          "drop an accelerated 2 class"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:cc09abeb5744447f78df72f65cac69a5",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.withdraw-window-opens",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Withdrawal Period Begins ($10 fee per course, W on transcript)",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-10-23",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": {
+          "amount_usd": 10,
+          "description": "$10 fee for each withdrawn course"
+        },
+        "aliases": [
+          "withdraw from accelerated 2"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": "A grade of W will be placed on the transcript.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:98c977bd00c493e2f092278951bb42df",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.non-attendance-documentation",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Documentation for Non-Attendance Period",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-10-23",
+        "date_end": "2026-10-26",
+        "weekday_as_published": "Friday-Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:bb2735d0f29217cc3c3045a19d839d3e",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.census-date",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Census Date",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-10-29",
+        "date_end": null,
+        "weekday_as_published": "Thursday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:b738ff467079e88f84be3cd529cb69ba",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.early-alert-period",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Academic Early Alert Period",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "administrative",
+        "date_start": "2026-11-02",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": "Source lists a single start date with no end date.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:eb5f379ab5cda6a2545c7cc21e83c306",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.midterm-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Evaluations Administered",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-11-09",
+        "date_end": "2026-11-13",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 2 midterms"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:cbd53bb4e13092f45c01803ba3f02658",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.midterm-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Mid-Term Grades Due",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-11-16",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:f19326535cf7cf38e2ee85588201a19c",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.last-day-withdraw",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day to Withdraw from Accelerated II Course(s) / University; Last Day to Submit Pass-Fail Request",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "deadline",
+        "date_start": "2026-11-23",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": true,
+        "action_summary": "Last day to withdraw from an Accelerated II course or the University, and last day to request Pass-Fail grading for an Accelerated II course.",
+        "related_fee": null,
+        "aliases": [
+          "withdrawal deadline accelerated 2",
+          "pass fail accelerated 2"
+        ],
+        "references": [
+          "ref.refund-schedule.accelerated"
+        ],
+        "notes": "Source directs readers to the academic catalog for the Pass-Fail policy.",
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0d73dbc97c081f0a7ad0d571fbbb56e2",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.thanksgiving-recess",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Thanksgiving Recess",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "recess",
+        "date_start": "2026-11-26",
+        "date_end": "2026-11-29",
+        "weekday_as_published": "Thursday-Sunday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "thanksgiving break accelerated 2"
+        ],
+        "references": [],
+        "notes": "Printed out of chronological order in the source (listed after the Nov 30 - Dec 11 course evaluation period).",
+        "data_quality_flags": [
+          "listed-out-of-order"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:2e4b758f861689ea2d158c3b0f0c8ad2",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.course-evaluations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Accelerated II Fall Course Evaluations",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-11-30",
+        "date_end": "2026-12-11",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": true,
+        "action_summary": "Complete course evaluations for Accelerated II courses.",
+        "related_fee": null,
+        "aliases": [
+          "course evaluations accelerated 2"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:3bb54b5784aefbe4a0925f90f4f54073",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.final-examinations",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Examinations",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "evaluation",
+        "date_start": "2026-12-07",
+        "date_end": "2026-12-11",
+        "weekday_as_published": "Monday-Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 2 finals",
+          "final exams accelerated session 2"
+        ],
+        "references": [],
+        "notes": "Source places the final examination period Dec 7-11 and the last day of classes on Dec 11, so the two overlap. Confirm the intended relationship.",
+        "data_quality_flags": [
+          "source-ambiguous",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:0c1a545b690a9364c7956e0f1632007e",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.last-day-of-classes",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Last Day of Classes",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "instruction-period",
+        "date_start": "2026-12-11",
+        "date_end": null,
+        "weekday_as_published": "Friday",
+        "time": null,
+        "affects_classes": "yes",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "when does accelerated 2 end"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:e7038e7a6ee92340b9b49c93c0f00b48",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.final-grades-due",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Final Grades Due",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "grading",
+        "date_start": "2026-12-14",
+        "date_end": null,
+        "weekday_as_published": "Monday",
+        "time": null,
+        "affects_classes": "not-applicable",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [
+          "accelerated 2 grades"
+        ],
+        "references": [],
+        "notes": null,
+        "data_quality_flags": []
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:9da501b4f67ff057b70ea60200b94857",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "cal.fall2026.accelerated-2.winter-recess-closure",
+      "kb_class": "structured-record",
+      "collection": "academic-calendar",
+      "payload": {
+        "title": "Winter Recess (University Closed)",
+        "session": "accelerated-2",
+        "campus": [
+          "dover",
+          "wilmington",
+          "georgetown"
+        ],
+        "event_type": "closure",
+        "date_start": "2026-12-24",
+        "date_end": "2027-01-01",
+        "weekday_as_published": "Thursday-Friday",
+        "time": null,
+        "affects_classes": "no",
+        "student_action_required": false,
+        "action_summary": null,
+        "related_fee": null,
+        "aliases": [],
+        "references": [],
+        "notes": "Source label reads 'Winter Recess Begins (University Closed)' for the Dec 24 - Jan 1 range, while the main calendar labels the same range 'Winter Recess (University Closed)'. Treated as the same closure.",
+        "data_quality_flags": [
+          "source-ambiguous"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701)",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.1-2"
+      },
+      "owner": {
+        "department": "Records & Registration",
+        "liaison_role": "Registrar's Office KB Liaison",
+        "escalation_queue": "records-registration"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": [
+          "student",
+          "faculty",
+          "staff"
+        ],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Academic Calendar, Fall 2026 - Office of Records & Registration (updated 7/23/2026)",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:80c3176bcea618ff0f9681919857a4cf",
+        "validation_status": "unvalidated"
+      }
+    }
+  ]
+}

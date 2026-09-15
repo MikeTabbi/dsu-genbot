@@ -1,0 +1,700 @@
+<title>DSU Knowledge Base Standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#F2F5F7; --surface:#FFFFFF; --surface-2:#E9EFF3;
+  --ink:#16222E; --ink-2:#4A5D6D; --ink-3:#7A8B99;
+  --rule:#D5DEE5; --rule-2:#C0CDD7;
+  --accent:#1F5C8B; --accent-2:#3C82B8; --accent-soft:#DEEAF3;
+  --crit:#9E362A; --crit-soft:#F6E3E0;
+  --warn:#8A6012; --warn-soft:#F7EBD4;
+  --ok:#2A6249; --ok-soft:#DFEDE6;
+  --shadow:0 1px 2px rgba(22,34,46,.06),0 6px 20px -12px rgba(22,34,46,.18);
+  --f-disp:"Bitter",Georgia,"Times New Roman",serif;
+  --f-body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#111820; --surface:#19222B; --surface-2:#212C36;
+    --ink:#E3EAEF; --ink-2:#9EB0BD; --ink-3:#788996;
+    --rule:#2A3742; --rule-2:#384855;
+    --accent:#7FB6DC; --accent-2:#5F9BC6; --accent-soft:#1A2A37;
+    --crit:#E3897A; --crit-soft:#33211E;
+    --warn:#D8AC55; --warn-soft:#2F2718;
+    --ok:#79B396; --ok-soft:#1B2A23;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111820; --surface:#19222B; --surface-2:#212C36;
+  --ink:#E3EAEF; --ink-2:#9EB0BD; --ink-3:#788996;
+  --rule:#2A3742; --rule-2:#384855;
+  --accent:#7FB6DC; --accent-2:#5F9BC6; --accent-soft:#1A2A37;
+  --crit:#E3897A; --crit-soft:#33211E;
+  --warn:#D8AC55; --warn-soft:#2F2718;
+  --ok:#79B396; --ok-soft:#1B2A23;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -14px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+
+/* ---------- masthead ---------- */
+.mast{
+  border-bottom:2px solid var(--ink);
+  padding:52px 0 26px; margin-bottom:8px;
+  display:flex; flex-wrap:wrap; align-items:flex-end; gap:28px 40px;
+}
+.mast-main{flex:1 1 420px;min-width:0}
+.eyebrow{
+  font-family:var(--f-mono); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+}
+h1{
+  font-family:var(--f-disp); font-weight:700; font-size:clamp(2.1rem,4.6vw,3.05rem);
+  line-height:1.08; letter-spacing:-.017em; margin:0; text-wrap:balance;
+}
+.dek{
+  font-size:1.09rem; color:var(--ink-2); margin:16px 0 0; max-width:60ch;
+}
+.mast-meta{
+  flex:0 0 auto; display:grid; gap:9px;
+  font-family:var(--f-mono); font-size:12px; color:var(--ink-2);
+}
+.mast-meta div{display:flex; gap:10px}
+.mast-meta b{color:var(--ink); font-weight:500; min-width:74px; display:inline-block}
+
+/* ---------- status strip ---------- */
+.strip{
+  display:flex; flex-wrap:wrap; gap:1px; background:var(--rule);
+  border:1px solid var(--rule); margin:0 0 56px;
+}
+.stat{
+  flex:1 1 150px; background:var(--surface); padding:16px 18px;
+}
+.stat .n{
+  font-family:var(--f-disp); font-size:1.72rem; font-weight:700;
+  line-height:1; font-variant-numeric:tabular-nums; letter-spacing:-.02em;
+}
+.stat .l{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--ink-3); margin-top:8px;
+}
+.stat.ok .n{color:var(--ok)} .stat.warn .n{color:var(--warn)} .stat.crit .n{color:var(--crit)}
+
+/* ---------- layout ---------- */
+.cols{display:grid; grid-template-columns:210px minmax(0,1fr); gap:56px; align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr; gap:0}}
+
+nav.toc{position:sticky; top:24px; font-size:14px}
+@media (max-width:900px){
+  nav.toc{position:static; margin-bottom:48px; padding-bottom:24px; border-bottom:1px solid var(--rule)}
+}
+nav.toc .th{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-3); padding-bottom:10px;
+  border-bottom:1px solid var(--rule); margin-bottom:6px;
+}
+nav.toc a{
+  display:flex; gap:10px; padding:5px 0; color:var(--ink-2);
+  text-decoration:none; border-bottom:1px solid transparent; line-height:1.35;
+}
+nav.toc a:hover{color:var(--accent)}
+nav.toc a span{
+  font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3);
+  flex:0 0 20px; padding-top:2px; font-variant-numeric:tabular-nums;
+}
+nav.toc a:hover span{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+main{min-width:0}
+section{margin-bottom:60px; scroll-margin-top:24px}
+h2{
+  font-family:var(--f-disp); font-size:1.52rem; font-weight:700; line-height:1.2;
+  letter-spacing:-.012em; margin:0 0 6px; text-wrap:balance;
+  display:flex; gap:14px; align-items:baseline;
+}
+h2 .num{
+  font-family:var(--f-mono); font-size:.72em; font-weight:400;
+  color:var(--accent); flex:0 0 auto; font-variant-numeric:tabular-nums;
+}
+h3{
+  font-family:var(--f-body); font-size:1.02rem; font-weight:600; letter-spacing:.005em;
+  margin:34px 0 4px; color:var(--ink);
+}
+.rule{height:1px; background:var(--rule-2); margin:14px 0 22px}
+p{margin:0 0 15px; max-width:68ch}
+main a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px}
+strong{font-weight:600}
+em{font-style:italic}
+code{
+  font-family:var(--f-mono); font-size:.855em; background:var(--surface-2);
+  padding:.12em .34em; border-radius:3px; color:var(--ink);
+}
+ul{margin:0 0 15px; padding-left:20px; max-width:68ch}
+li{margin-bottom:7px}
+li::marker{color:var(--ink-3)}
+
+/* ---------- pull quote / premise ---------- */
+.premise{
+  border-left:3px solid var(--accent); background:var(--accent-soft);
+  padding:18px 22px; margin:0 0 24px; max-width:68ch;
+}
+.premise p{margin:0; font-family:var(--f-disp); font-size:1.05rem; line-height:1.5}
+.premise p+p{margin-top:10px}
+
+.callout{
+  border:1px solid var(--rule-2); border-left:3px solid var(--crit);
+  background:var(--surface); padding:16px 20px; margin:0 0 22px; max-width:68ch;
+  box-shadow:var(--shadow);
+}
+.callout .hd{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--crit); margin-bottom:8px;
+}
+.callout p:last-child{margin-bottom:0}
+
+/* ---------- tables ---------- */
+.scroll{overflow-x:auto; margin:0 0 24px; border:1px solid var(--rule); background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+thead th{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:400; background:var(--surface-2);
+  border-bottom:1px solid var(--rule-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+td code{font-size:.82em; background:none; padding:0; color:var(--accent)}
+.no{font-family:var(--f-mono); color:var(--crit); font-weight:500; white-space:nowrap}
+.yes{font-family:var(--f-mono); color:var(--ok); font-weight:500; white-space:nowrap}
+
+/* class chips */
+.chip{
+  display:inline-block; font-family:var(--f-mono); font-size:11px; font-weight:500;
+  padding:2px 7px; border:1px solid currentColor; border-radius:2px; white-space:nowrap;
+}
+.cA{color:var(--accent)} .cB{color:var(--ok)} .cC{color:var(--warn)} .cD{color:var(--ink-3)}
+td.classcell{white-space:nowrap; padding-right:6px}
+
+/* ---------- code block ---------- */
+pre{
+  font-family:var(--f-mono); font-size:12.8px; line-height:1.62;
+  background:var(--surface); color:var(--ink); border:1px solid var(--rule);
+  border-left:3px solid var(--accent-2);
+  padding:16px 18px; overflow-x:auto; margin:0 0 22px;
+}
+pre code{background:none; padding:0; font-size:inherit}
+.k{color:var(--accent)} .s{color:var(--ok)} .c{color:var(--ink-3); font-style:italic}
+
+/* ---------- field notes ---------- */
+.fields{display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); margin:0 0 24px}
+.field{background:var(--surface); padding:15px 18px}
+.field .fn{font-family:var(--f-mono); font-size:12.5px; color:var(--accent); margin-bottom:5px}
+.field p{margin:0; font-size:15px; max-width:none}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:76px; padding-top:22px; border-top:2px solid var(--ink);
+  font-size:14px; color:var(--ink-2); display:flex; flex-wrap:wrap; gap:8px 32px;
+}
+footer .fm{font-family:var(--f-mono); font-size:12px}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="mast-main">
+    <p class="eyebrow">Delaware State University · Student Assistant</p>
+    <h1>Knowledge Base Content Standard</h1>
+    <p class="dek">How content enters the chatbot's knowledge base, who owns it, when it
+    expires, and which retrieval path answers it. Platform-neutral — nothing here depends
+    on the Phase&nbsp;0 Azure-versus-Bedrock decision.</p>
+  </div>
+  <div class="mast-meta">
+    <div><b>Version</b> 0.9 draft</div>
+    <div><b>Date</b> Aug 26, 2026</div>
+    <div><b>Review</b> IT + liaisons</div>
+    <div><b>Companion</b> Impl. Plan v1.0</div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="stat ok"><div class="n">0</div><div class="l">Hard failures</div></div>
+  <div class="stat"><div class="n">79</div><div class="l">Records indexed</div></div>
+  <div class="stat"><div class="n">545</div><div class="l">Gate checks</div></div>
+  <div class="stat ok"><div class="n">34/34</div><div class="l">Golden tests</div></div>
+  <div class="stat warn"><div class="n">7</div><div class="l">Owner sign-offs open</div></div>
+</div>
+
+<div class="cols">
+
+<nav class="toc" aria-label="Contents">
+  <div class="th">Contents</div>
+  <a href="#s1"><span>1</span>Why this exists</a>
+  <a href="#s2"><span>2</span>Four content classes</a>
+  <a href="#s3"><span>3</span>The universal envelope</a>
+  <a href="#s4"><span>4</span>Class-specific rules</a>
+  <a href="#s5"><span>5</span>The validation gate</a>
+  <a href="#s6"><span>6</span>Ambiguity is escalated</a>
+  <a href="#s7"><span>7</span>Coverage, not correctness</a>
+  <a href="#s8"><span>8</span>Repository layout</a>
+  <a href="#s9"><span>9</span>Platform portability</a>
+  <a href="#s10"><span>10</span>Adding a new source</a>
+  <a href="#s11"><span>11</span>What this doesn't do</a>
+</nav>
+
+<main>
+
+<section id="s1">
+  <h2><span class="num">1</span>Why this document exists</h2>
+  <div class="rule"></div>
+  <p>The implementation plan commits to two invariants that live or die on content quality:
+  <em>every answer grounded (cited) or escalated</em>, and <em>groundedness ≥ 95% on the
+  golden set</em>.</p>
+  <p>Neither is achievable by prompt engineering. They are properties of how content is
+  stored, tagged, and retrieved. A chatbot that reads a PDF of the academic calendar and is
+  asked <em>"can I still drop a class?"</em> will produce a confident, cited, and
+  <strong>wrong</strong> answer — because the correct answer depends on today's date, which
+  of three concurrent academic sessions the student is enrolled in, and a fee/refund
+  interaction the PDF states inconsistently.</p>
+  <p>This standard exists so that failure is structurally impossible, not merely
+  discouraged.</p>
+  <div class="premise">
+    <p>The knowledge base is not a pile of documents. It is a set of typed records, each
+    with a known owner, a known expiry, and a known retrieval path.</p>
+  </div>
+</section>
+
+<section id="s2">
+  <h2><span class="num">2</span>The four content classes</h2>
+  <div class="rule"></div>
+  <p>Every item entering the KB is classified into exactly one class. <strong>The class
+  determines how the item is retrieved</strong> — the single most important decision in the
+  pipeline.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Class</th><th>What it holds</th><th>Retrieval path</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="classcell"><span class="chip cA">A · structured</span></td>
+        <td>Dates, deadlines, fees, contacts, office hours, refund tiers, routing tables</td>
+        <td><strong>Deterministic tool call.</strong> Code queries validated JSON; nothing
+        embedded in the answer path.</td>
+        <td>These questions need comparison, arithmetic, and filtering against <em>today</em>.
+        Models reading retrieved text do that unreliably.</td>
+      </tr>
+      <tr>
+        <td class="classcell"><span class="chip cB">B · prose</span></td>
+        <td>Policy language, catalog sections, handbook, procedure narratives</td>
+        <td><strong>Vector RAG</strong> with section-aware chunking</td>
+        <td>Genuinely semantic. "What's the policy on academic probation" has no lookup key.</td>
+      </tr>
+      <tr>
+        <td class="classcell"><span class="chip cC">C · Q&amp;A</span></td>
+        <td>Department-authored FAQ: one question, one curated answer</td>
+        <td><strong>Question-embedding match</strong> with a high similarity floor; answer
+        returned verbatim</td>
+        <td>Highest-precision path. The department owns the exact wording. Best
+        containment-per-effort.</td>
+      </tr>
+      <tr>
+        <td class="classcell"><span class="chip cD">D · web-synced</span></td>
+        <td>desu.edu page content</td>
+        <td><strong>Extracted into A, B, or C at ingest.</strong> Never retrieved as raw HTML.</td>
+        <td>A web page is a <em>source</em>, not a class. Sync is a freshness mechanism, not a
+        retrieval strategy.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>2.1 &nbsp;The classification rule</h3>
+  <div class="premise">
+    <p>If the correct answer would change depending on <strong>when</strong> it is asked, or
+    requires <strong>counting, comparing, or filtering</strong> — it is Class A. No exceptions.</p>
+  </div>
+  <p>This is a hard rule because it is the one people get wrong. "Tuition is $X per credit"
+  feels like prose. It is Class A: it has an effective date, and it will change.</p>
+
+  <h3>2.2 &nbsp;Discovery cards — how Class A stays findable</h3>
+  <p>Class A records aren't embedded, which raises a fair question: how does the retriever
+  know a calendar tool exists for "when does the semester start"?</p>
+  <p>Each Class A <em>collection</em> — not each record — publishes one short natural-language
+  discovery card that <em>is</em> embedded. Retrieval matches the card; the card routes to the
+  tool; the tool returns the fact.</p>
+  <pre><code><span class="c">// discovery card: academic-calendar</span>
+"Academic calendar dates and deadlines for Delaware State University:
+ semester start and end dates, add/drop and withdrawal deadlines,
+ registration periods, holidays and university closures, exam
+ schedules, grade due dates, residence hall open/close dates, payment
+ due dates. Covers the main semester and the 8-week accelerated
+ sessions at the Dover, Wilmington, and Georgetown campuses."
+   <span class="k">→ answered by tool:</span> academic_calendar</code></pre>
+  <p>Facts stay in one place and stay reachable. It also means adding next term's calendar
+  requires <strong>no</strong> re-indexing — only new records behind the same card.</p>
+</section>
+
+<section id="s3">
+  <h2><span class="num">3</span>The universal envelope</h2>
+  <div class="rule"></div>
+  <p>Every record in every class carries the same metadata envelope. Departments author the
+  payload; the envelope is non-negotiable and machine-validated.</p>
+  <pre><code>{
+  <span class="k">"id"</span>: <span class="s">"cal.fall2026.main.classes-begin"</span>,
+  <span class="k">"kb_class"</span>: <span class="s">"structured-record"</span>,
+  <span class="k">"collection"</span>: <span class="s">"academic-calendar"</span>,
+
+  <span class="k">"payload"</span>: { <span class="c">/* class-specific */</span> },
+
+  <span class="k">"source"</span>: {
+    <span class="k">"type"</span>: <span class="s">"pdf"</span>,
+    <span class="k">"title"</span>: <span class="s">"Academic Calendar Fall 2026 (202701)"</span>,
+    <span class="k">"uri"</span>: <span class="s">"https://www.desu.edu/..."</span>,
+    <span class="k">"source_updated"</span>: <span class="s">"2026-07-23"</span>,
+    <span class="k">"locator"</span>: <span class="s">"p.1"</span>
+  },
+  <span class="k">"owner"</span>: {
+    <span class="k">"department"</span>: <span class="s">"Records &amp; Registration"</span>,
+    <span class="k">"liaison_role"</span>: <span class="s">"Registrar's Office KB Liaison"</span>,
+    <span class="k">"escalation_queue"</span>: <span class="s">"records-registration"</span>
+  },
+  <span class="k">"governance"</span>: {
+    <span class="k">"data_tier"</span>: 0,
+    <span class="k">"audience"</span>: [<span class="s">"student"</span>, <span class="s">"faculty"</span>, <span class="s">"staff"</span>],
+    <span class="k">"authority"</span>: <span class="s">"authoritative"</span>
+  },
+  <span class="k">"temporal"</span>: {
+    <span class="k">"effective_from"</span>: <span class="s">"2026-07-23"</span>,
+    <span class="k">"effective_to"</span>: <span class="s">"2027-01-31"</span>,
+    <span class="k">"supersedes"</span>: null
+  },
+  <span class="k">"review"</span>: {
+    <span class="k">"cadence"</span>: <span class="s">"per-term"</span>,
+    <span class="k">"last_reviewed"</span>: <span class="s">"2026-08-26"</span>,
+    <span class="k">"next_due"</span>: <span class="s">"2026-12-01"</span>,
+    <span class="k">"reviewed_by"</span>: <span class="s">"pending-liaison-signoff"</span>
+  },
+  <span class="k">"citation"</span>: {
+    <span class="k">"label"</span>: <span class="s">"Academic Calendar, Fall 2026 — Records &amp; Registration"</span>,
+    <span class="k">"url"</span>: <span class="s">"https://www.desu.edu/..."</span>
+  },
+  <span class="k">"provenance"</span>: {
+    <span class="k">"ingest_method"</span>: <span class="s">"assisted-extraction"</span>,
+    <span class="k">"content_hash"</span>: <span class="s">"sha256:…"</span>,
+    <span class="k">"validation_status"</span>: <span class="s">"passed-with-warnings"</span>
+  }
+}</code></pre>
+
+  <h3>3.1 &nbsp;Field notes that matter</h3>
+  <div class="fields">
+    <div class="field">
+      <div class="fn">governance.data_tier</div>
+      <p>Maps to the plan's four-tier model. Phase 1 admits <strong>Tier 0 only</strong>. Tier
+      lives on the record so the Phase 3 expansion is a filter change, not a re-architecture.
+      Enforced at the retrieval layer — a Tier 1 record is invisible to a session whose SSO
+      claims don't match <code>audience</code>.</p>
+    </div>
+    <div class="field">
+      <div class="fn">temporal.effective_to</div>
+      <p>Enforced at retrieval, not in the prompt. An expired record is not returned at all.
+      The highest-value field in the envelope: it is what prevents the bot from confidently
+      quoting last spring's withdrawal deadline in October. A record with no
+      <code>effective_to</code> must justify itself.</p>
+    </div>
+    <div class="field">
+      <div class="fn">governance.authority</div>
+      <p>Distinguishes <code>authoritative</code> (the office of record's own words) from
+      <code>derived</code> (a summary, an FAQ built from a policy). On conflict, authoritative
+      wins and the derived record is flagged for its owner. Never let two records answer the
+      same question with equal standing.</p>
+    </div>
+    <div class="field">
+      <div class="fn">owner.escalation_queue</div>
+      <p>On every record, because escalation is content-driven, not intent-driven. When the bot
+      can't fully answer from a record, it already knows where the handoff goes — no separate
+      routing model to maintain.</p>
+    </div>
+    <div class="field">
+      <div class="fn">review.next_due</div>
+      <p>Drives a staleness report, not a hope. Content past <code>next_due</code> is
+      downgraded: still retrievable, but the answer carries "last verified on ___, confirm with
+      the office," and the liaison gets a notice. Content past <code>effective_to</code> leaves
+      the index outright.</p>
+    </div>
+  </div>
+
+  <h3>3.2 &nbsp;One fact, one home</h3>
+  <p>A deadline lives in exactly one record. If Financial Aid's FAQ says "the add/drop
+  deadline is September 3" and the calendar record says the same thing, they will drift, and
+  the bot will be confidently wrong half the time.</p>
+  <p>Instead, the FAQ <em>references</em> the calendar record, and the reference resolves to
+  the live value at answer time:</p>
+  <pre><code>{ <span class="k">"kb_class"</span>: <span class="s">"qa-pair"</span>,
+  <span class="k">"payload"</span>: {
+    <span class="k">"question"</span>: <span class="s">"Will I get my money back if I drop a class?"</span>,
+    <span class="k">"answer"</span>: <span class="s">"That depends on when you drop. Through
+                 {{ref:cal.fall2026.main.last-day-add-drop}} you can
+                 drop with no financial penalty…"</span>,
+    <span class="k">"references"</span>: [<span class="s">"cal.fall2026.main.last-day-add-drop"</span>,
+                    <span class="s">"ref.refund-schedule.fall-spring"</span>]
+  }}</code></pre>
+  <p>Unresolvable references fail the gate. This is how the knowledge base stays true without
+  asking six departments to remember to update the same number.</p>
+</section>
+
+<section id="s4">
+  <h2><span class="num">4</span>Class-specific rules</h2>
+  <div class="rule"></div>
+
+  <h3><span class="chip cA">A</span> &nbsp;structured-record</h3>
+  <p>Calendar events must carry:</p>
+  <ul>
+    <li><code>date_start</code> / <code>date_end</code> in ISO 8601 — never prose dates</li>
+    <li><code>weekday_as_published</code> as stated in the source, <strong>validated against
+    the actual date</strong> to catch transcription errors</li>
+    <li><code>session</code> — <strong>required.</strong> The field that prevents the most
+    common wrong answer, because three concurrent sessions have different deadlines for the
+    same action</li>
+    <li><code>event_type</code> from a controlled vocabulary</li>
+    <li><code>student_action_required</code> — drives answer prioritization now and proactive
+    nudges in Phase 4</li>
+    <li><code>affects_classes</code> — <code>yes</code> / <code>no</code> /
+    <code>partial</code> / <code>unstated</code>. <strong><code>unstated</code> is a
+    legitimate and important value</strong> (see §6)</li>
+  </ul>
+  <p>Reference tables — refund tiers, fee schedules — are stored as ordered rule lists with
+  explicit boundaries and queried by a function that takes the inputs and returns the outcome.
+  A table is never handed to the student to interpret; the tool computes their specific answer
+  and cites the table.</p>
+
+  <h3><span class="chip cB">B</span> &nbsp;prose</h3>
+  <ul>
+    <li>Chunk on <strong>semantic boundaries</strong> — heading, numbered clause — not fixed
+    token windows. Target 300–800 tokens; never split mid-clause.</li>
+    <li>Every chunk carries its <strong>heading path</strong> (<code>Academic Catalog ›
+    Grading › Pass-Fail Option</code>) prepended to the embedded text. Recovers the context
+    chunking destroys, and does more for retrieval quality than any amount of overlap tuning.</li>
+    <li>Chunks retain <code>locator</code> so citations point somewhere a human can verify.</li>
+    <li><strong>Tables inside prose documents are extracted to Class A</strong>, never embedded
+    as text. A table flattened into a token stream is a reliable source of confident nonsense.</li>
+    <li>Overlap: one sentence, not 200 tokens.</li>
+  </ul>
+
+  <h3><span class="chip cC">C</span> &nbsp;qa-pair</h3>
+  <ul>
+    <li>Answers are ≤ 120 words, in the persona voice from the plan's conversation design.</li>
+    <li>The similarity floor is deliberately <strong>high</strong>. A near-miss FAQ is worse
+    than no FAQ: the answer is returned verbatim and reads as authoritative. Below the floor,
+    fall through to Class B/A or escalate.</li>
+    <li>Each pair carries 3–8 <code>paraphrases</code> — real student phrasings from ticket
+    data. This is where containment rate actually comes from.</li>
+    <li>The pilot departments' <strong>cheapest</strong> high-value contribution. The 4-week
+    onboarding content sprint should produce these first.</li>
+  </ul>
+
+  <h3><span class="chip cD">D</span> &nbsp;web-synced</h3>
+  <ul>
+    <li>Fetch → extract → classify → emit A/B/C records. The HTML is never the KB record.</li>
+    <li>Store <code>content_hash</code> per page. A changed hash means re-extract, re-validate,
+    and <strong>notify the owning liaison</strong> — it does not silently republish. Web pages
+    change without telling the KB team, and silent auto-republish is how unreviewed content
+    reaches students.</li>
+    <li>Pages that fail extraction cleanly — heavy JS, PDF-in-iframe, tables-as-images — are
+    flagged for manual authoring rather than ingested badly.</li>
+    <li>Respect <code>robots.txt</code> and rate limits, even on your own domain.</li>
+  </ul>
+</section>
+
+<section id="s5">
+  <h2><span class="num">5</span>The validation gate</h2>
+  <div class="rule"></div>
+  <p><strong>Nothing enters the index without passing.</strong> The gate is code, run in CI on
+  the content repo — not a checklist someone remembers.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Check</th><th>Failure mode it prevents</th></tr></thead>
+    <tbody>
+      <tr><td>Envelope schema conformance</td><td>Missing owner → no escalation route; missing tier → governance gap</td></tr>
+      <tr><td>Payload schema per class</td><td>Prose dates, missing <code>session</code>, uncontrolled vocabulary</td></tr>
+      <tr><td><strong>Weekday cross-check</strong></td><td>Transcription errors. "September 4 (Friday)" verified against the real 2026 calendar</td></tr>
+      <tr><td><strong>Date sanity</strong></td><td><code>date_end</code> before <code>date_start</code>; dates outside the effective window; term-boundary violations</td></tr>
+      <tr><td><strong>Reference resolution</strong></td><td><code>{{ref:…}}</code> pointing at a record that doesn't exist or has expired</td></tr>
+      <tr><td><strong>Contradiction detection</strong></td><td>Two records asserting different values for the same event key</td></tr>
+      <tr><td><strong>Duplicate-fact detection</strong></td><td>The same deadline asserted in more than one authoritative record</td></tr>
+      <tr><td>Overlapping table rules</td><td>A published table that silently contradicts itself</td></tr>
+      <tr><td>Citation reachability</td><td>Dead source URLs — a cited answer that can't be verified is not grounded</td></tr>
+      <tr><td>Coverage report</td><td>Session / event-type combinations with no record (see §7)</td></tr>
+      <tr><td>Staleness report</td><td>Records past <code>next_due</code> or <code>effective_to</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Outcomes are <code>passed</code>, <code>passed-with-warnings</code>, <code>failed</code>.
+  <strong>Warnings do not block indexing but do block launch</strong> — the pre-launch bar is
+  zero unresolved warnings on Tier 0 content.</p>
+</section>
+
+<section id="s6">
+  <h2><span class="num">6</span>Ambiguity is escalated, never inferred</h2>
+  <div class="rule"></div>
+  <p>This is the rule that most separates a trustworthy campus assistant from a plausible one.</p>
+  <p>The Fall 2026 calendar lists <em>Constitution Day (DSU Observed)</em> on September 11 and
+  <em>Convocation</em> on September 15. Neither says whether classes meet. A model asked "do I
+  have class on Convocation day?" will infer — because inference is what models do — and it
+  will sound certain.</p>
+  <div class="callout">
+    <div class="hd">Correct behavior</div>
+    <p>"The calendar lists Convocation on Tuesday, September 15, but it doesn't say whether
+    classes are cancelled. I don't want to guess on something that affects your attendance.
+    Want me to send this to Records &amp; Registration?"</p>
+  </div>
+  <p>Mechanically: <code>affects_classes: "unstated"</code> makes the tool return a
+  <strong>known-unknown</strong>, and the answer template for a known-unknown is an escalation
+  offer. The gap shows in the coverage report, so the liaison can fill it permanently — one
+  student's unanswered question becomes a permanent improvement.</p>
+  <p>The same pattern covers contradictory source content, expired records with no successor,
+  and Tier 3 topics, where the escalation is the <em>only</em> correct response.</p>
+
+  <h3>The answer contract</h3>
+  <p>Every tool returns an explicit <code>answer_type</code>. The renderer's permission to
+  assert a fact is derived from it, not from the model's confidence.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>answer_type</th><th>Meaning</th><th>May state a fact?</th></tr></thead>
+    <tbody>
+      <tr><td><code>resolved</code></td><td>A fact, with citation</td><td class="yes">yes</td></tr>
+      <tr><td><code>needs_clarification</code></td><td>Session unknown and it matters</td><td class="no">no — ask once</td></tr>
+      <tr><td><code>known_unknown</code></td><td>The source genuinely doesn't say</td><td class="no">no — escalate</td></tr>
+      <tr><td><code>ambiguous</code></td><td>The source contradicts itself</td><td class="no">no — show both</td></tr>
+      <tr><td><code>no_coverage</code></td><td>Nothing matches</td><td class="no">no — escalate</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>A regression test asserts that the renderer never asserts on a non-resolved result. That
+  test is the groundedness guarantee; if it goes red, the ≥95% target is at risk.</p>
+</section>
+
+<section id="s7">
+  <h2><span class="num">7</span>Coverage, not just correctness</h2>
+  <div class="rule"></div>
+  <p>Groundedness measures whether answers are supported. It says nothing about the questions
+  you <em>can't</em> answer — and those drive the containment metric.</p>
+  <p>The coverage report enumerates the expected session × event-type matrix and reports holes.
+  Applied to Fall 2026 it immediately surfaced that Accelerated Session I has no census date
+  and neither accelerated session has residence-hall dates, while the main semester has both.
+  That isn't a bug in the calendar; it's a question for the Registrar — better asked in August
+  than discovered by a student in October.</p>
+  <p>Every escalation is also a coverage signal. The steady-state quarterly review with each
+  department should open with: <em>here are the top 20 things students asked you that we
+  couldn't answer.</em></p>
+</section>
+
+<section id="s8">
+  <h2><span class="num">8</span>Repository layout</h2>
+  <div class="rule"></div>
+  <p>Content lives in git. It is reviewed like code, because it carries the same risk.</p>
+  <pre><code>dsu-kb/
+├── schemas/                    <span class="c"># the machine-readable standard</span>
+│   ├── envelope.schema.json
+│   ├── structured-record.calendar.schema.json
+│   ├── structured-record.reference-table.schema.json
+│   ├── prose-chunk.schema.json
+│   └── qa-pair.schema.json
+├── kb/
+│   ├── calendar/               <span class="c"># one file per term — Records &amp; Registration</span>
+│   ├── reference/              <span class="c"># fee / refund / contact tables</span>
+│   ├── prose/                  <span class="c"># chunked policy + catalog</span>
+│   └── faq/                    <span class="c"># one file per department</span>
+├── tools/
+│   ├── calendar_tool.py        <span class="c"># the deterministic Class A tool</span>
+│   ├── render.py               <span class="c"># the answer contract</span>
+│   ├── ingest_prose.py         <span class="c"># Class B chunker</span>
+│   ├── ingest_faq.py           <span class="c"># Class C loader</span>
+│   ├── web_sync.py             <span class="c"># Class D fetch + change detection</span>
+│   └── validate_kb.py          <span class="c"># the gate</span>
+├── tests/
+│   └── test_golden_set.py
+└── docs/</code></pre>
+  <p><strong>Ownership maps to directories.</strong> A liaison has write access to their own
+  FAQ file and collections; the central team owns <code>schemas/</code> and <code>tools/</code>.
+  Pull requests to content run the gate automatically. This is how the plan's federated model
+  gets teeth: the central team enforces the quality bar through the gate, not through review
+  meetings.</p>
+</section>
+
+<section id="s9">
+  <h2><span class="num">9</span>Platform portability</h2>
+  <div class="rule"></div>
+  <p>Nothing above names a vendor. The mapping when Phase 0 concludes:</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>This standard</th><th>Azure</th><th>AWS Bedrock</th></tr></thead>
+    <tbody>
+      <tr><td>Class A tool</td><td>Azure OpenAI function calling → Function App</td><td>Bedrock Agent action group → Lambda</td></tr>
+      <tr><td>Class B/C index</td><td>Azure AI Search (vector + filter on envelope fields)</td><td>Bedrock Knowledge Base + metadata filters</td></tr>
+      <tr><td>Content repo</td><td>GitHub / Azure Repos + Actions running the gate</td><td>Same</td></tr>
+      <tr><td>Envelope fields</td><td>Search index facets / filters</td><td>KB metadata sidecars</td></tr>
+      <tr><td>Tier &amp; audience enforcement</td><td>Search filter injected server-side from token claims</td><td>Same, in the action-group handler</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>The tool functions are plain Python with JSON Schema signatures; both platforms consume
+  that shape. Migration cost is the adapter layer, not the content.</p>
+</section>
+
+<section id="s10">
+  <h2><span class="num">10</span>Adding a new source</h2>
+  <div class="rule"></div>
+  <p>The repeatable path. Steps run in order — each depends on the one before it.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:2.5rem">#</th><th>Step</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Identify the office of record</td><td>No owner, no ingest. A hard gate, not a formality.</td></tr>
+      <tr><td>2</td><td>Classify each part of the source</td><td>One PDF often yields records in three classes.</td></tr>
+      <tr><td>3</td><td>Extract to the envelope</td><td>Assisted extraction is fine; unreviewed extraction is not.</td></tr>
+      <tr><td>4</td><td>Run the gate</td><td>Fix hard failures.</td></tr>
+      <tr><td>5</td><td>Triage warnings into a data-quality report</td><td>The source's ambiguities, addressed to the owning office.</td></tr>
+      <tr><td>6</td><td>Liaison sign-off</td><td>On the records and the report's resolutions. Set <code>reviewed_by</code>.</td></tr>
+      <tr><td>7</td><td>Write the golden-set questions</td><td>10–20 real student phrasings with expected answers. A source without them cannot be measured, so it cannot be launched.</td></tr>
+      <tr><td>8</td><td>Index and monitor</td><td>Watch escalation reasons for two weeks — they tell you what step 2 got wrong.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Steps 5–7 are the ones under schedule pressure to skip. They are the ones that produce
+  the ≥95% groundedness number.</p>
+</section>
+
+<section id="s11">
+  <h2><span class="num">11</span>What this standard deliberately does not do</h2>
+  <div class="rule"></div>
+  <ul>
+    <li><strong>It does not try to make the LLM careful.</strong> Correctness is enforced by
+    tools, schemas, filters, and gates. Prompts are the last line, not the first.</li>
+    <li><strong>It does not centralize content authorship.</strong> Six departments writing
+    their own records with a shared envelope scales; one team writing everyone's content does
+    not.</li>
+    <li><strong>It does not admit Tier 1+ content in Phase 1.</strong> The envelope is ready
+    for it; the pipeline is not, and the plan says Phase 1 is Tier 0 only.</li>
+    <li><strong>It does not treat "the PDF is on the website" as ingestion.</strong> Publishing
+    is not structuring.</li>
+  </ul>
+</section>
+
+<footer>
+  <span class="fm">DSU Chatbot · Knowledge Base Content Standard v0.9</span>
+  <span class="fm">Phase 0 deliverable · August 26, 2026</span>
+  <span class="fm">Companion: Implementation Plan v1.0</span>
+</footer>
+
+</main>
+</div>
+</div>

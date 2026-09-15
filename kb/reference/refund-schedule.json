@@ -1,0 +1,195 @@
+{
+  "collection": "refund-schedule",
+  "discovery_card": {
+    "id": "card.refund-schedule",
+    "text": "Tuition and fee refund percentages when a student drops or withdraws from a course at Delaware State University. Covers how much money is refunded depending on how long after the start of instruction the withdrawal happens, for both the fall/spring semesters and the accelerated, summer, and winter sessions. Answers questions about getting money back for a dropped class, refund deadlines, and financial responsibility for withdrawn courses.",
+    "answered_by_tool": "refund_schedule",
+    "note": "The tool computes the student's specific outcome from their withdrawal date. The table is never handed to the student to interpret."
+  },
+  "records": [
+    {
+      "id": "ref.refund-schedule.fall-spring",
+      "kb_class": "structured-record",
+      "collection": "refund-schedule",
+      "payload": {
+        "title": "Refund Schedule for Course Withdrawals - Fall/Spring Semesters",
+        "applies_to": ["main"],
+        "boundary_basis": null,
+        "input_spec": [
+          {
+            "name": "days_since_first_instruction",
+            "type": "integer",
+            "description": "Calendar days from the first day of instruction to the withdrawal date. The source does not state whether the first day counts as day 0 or day 1 - see data_quality_flags."
+          },
+          {
+            "name": "on_or_before_last_day_to_add",
+            "type": "boolean",
+            "description": "Whether the withdrawal falls on or before the term's Last Day to Add Classes."
+          }
+        ],
+        "rules": [
+          {
+            "label": "Pre-registration to Last Day to Add Classes",
+            "condition": { "field": "on_or_before_last_day_to_add", "op": "==", "value": true },
+            "outcome": { "tuition_refund_pct": 100, "fees_refund_pct": 100 },
+            "notes": "For Fall 2026 the Last Day to Add is September 3, which is 9 calendar days after the August 25 first day of instruction. This row therefore overlaps the 80% and 60% rows below."
+          },
+          {
+            "label": "Six Calendar Days or less",
+            "condition": { "field": "days_since_first_instruction", "op": "<=", "value": 6 },
+            "outcome": { "tuition_refund_pct": 80, "fees_refund_pct": 0 },
+            "notes": null
+          },
+          {
+            "label": "Nine Calendar Days or less",
+            "condition": { "field": "days_since_first_instruction", "op": "<=", "value": 9 },
+            "outcome": { "tuition_refund_pct": 60, "fees_refund_pct": 0 },
+            "notes": "Read as days 7-9 given the preceding row, but the source does not say so."
+          },
+          {
+            "label": "After Nine Calendar Days",
+            "condition": { "field": "days_since_first_instruction", "op": ">", "value": 9 },
+            "outcome": { "tuition_refund_pct": 0, "fees_refund_pct": 0 },
+            "notes": null
+          }
+        ],
+        "data_quality_flags": [
+          "overlapping-rules",
+          "undefined-boundary-basis",
+          "source-contradiction",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701) - Refund Schedule for Course(s) Withdrawals",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.3, table 1"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": ["student", "staff"],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Refund Schedule for Course Withdrawals, Fall 2026 Academic Calendar - Office of Student Accounts",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:pending-recompute-on-signoff",
+        "validation_status": "unvalidated"
+      }
+    },
+    {
+      "id": "ref.refund-schedule.accelerated",
+      "kb_class": "structured-record",
+      "collection": "refund-schedule",
+      "payload": {
+        "title": "Refund Schedule for Course Withdrawals - Accelerated/Summer/Winter Sessions",
+        "applies_to": ["accelerated-1", "accelerated-2", "winter", "summer"],
+        "boundary_basis": null,
+        "input_spec": [
+          {
+            "name": "days_since_first_instruction",
+            "type": "integer",
+            "description": "Calendar days from the session's first day of instruction to the withdrawal date."
+          },
+          {
+            "name": "on_or_before_last_day_to_add",
+            "type": "boolean",
+            "description": "Whether the withdrawal falls on or before the session's Last Day to Add Classes."
+          }
+        ],
+        "rules": [
+          {
+            "label": "Pre-registration to Last Day to Add Classes",
+            "condition": { "field": "on_or_before_last_day_to_add", "op": "==", "value": true },
+            "outcome": { "tuition_refund_pct": 100, "fees_refund_pct": 100 },
+            "notes": "Accelerated I's Last Day to Add is September 3, 9 calendar days after its August 25 start - the same overlap as the fall/spring table. Accelerated II's is October 22, 3 days after its October 19 start, which does not overlap."
+          },
+          {
+            "label": "Six Calendar Days or less",
+            "condition": { "field": "days_since_first_instruction", "op": "<=", "value": 6 },
+            "outcome": { "tuition_refund_pct": 80, "fees_refund_pct": 0 },
+            "notes": null
+          },
+          {
+            "label": "Nine Calendar Days or less",
+            "condition": { "field": "days_since_first_instruction", "op": "<=", "value": 9 },
+            "outcome": { "tuition_refund_pct": 60, "fees_refund_pct": 0 },
+            "notes": "Read as days 7-9 given the preceding row, but the source does not say so."
+          },
+          {
+            "label": "After Nine Calendar Days",
+            "condition": { "field": "days_since_first_instruction", "op": ">", "value": 9 },
+            "outcome": { "tuition_refund_pct": 0, "fees_refund_pct": 0 },
+            "notes": null
+          }
+        ],
+        "data_quality_flags": [
+          "overlapping-rules",
+          "undefined-boundary-basis",
+          "source-contradiction",
+          "needs-owner-confirmation"
+        ]
+      },
+      "source": {
+        "type": "pdf",
+        "title": "Academic Calendar Fall 2026 (202701) - Refund Schedule for Course(s) Withdrawals",
+        "uri": "https://www.desu.edu/academics/academic-calendar",
+        "source_updated": "2026-07-23",
+        "locator": "p.3, table 2"
+      },
+      "owner": {
+        "department": "Student Accounts",
+        "liaison_role": "Student Accounts KB Liaison",
+        "escalation_queue": "student-accounts"
+      },
+      "governance": {
+        "data_tier": 0,
+        "audience": ["student", "staff"],
+        "authority": "authoritative"
+      },
+      "temporal": {
+        "effective_from": "2026-07-23",
+        "effective_to": "2027-01-31",
+        "supersedes": null
+      },
+      "review": {
+        "cadence": "per-term",
+        "last_reviewed": null,
+        "next_due": "2026-12-01",
+        "reviewed_by": "pending-liaison-signoff"
+      },
+      "citation": {
+        "label": "Refund Schedule for Course Withdrawals, Fall 2026 Academic Calendar - Office of Student Accounts",
+        "url": "https://www.desu.edu/academics/academic-calendar"
+      },
+      "provenance": {
+        "ingested_at": "2026-08-26T00:00:00Z",
+        "ingest_method": "assisted-extraction",
+        "content_hash": "sha256:pending-recompute-on-signoff",
+        "validation_status": "unvalidated"
+      }
+    }
+  ]
+}

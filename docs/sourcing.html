@@ -1,0 +1,456 @@
+<title>Sourcing Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#F2F5F7; --surface:#FFFFFF; --surface-2:#E9EFF3;
+  --ink:#16222E; --ink-2:#4A5D6D; --ink-3:#7A8B99;
+  --rule:#D5DEE5; --rule-2:#C0CDD7;
+  --accent:#1F5C8B; --accent-2:#3C82B8; --accent-soft:#DEEAF3;
+  --crit:#9E362A; --crit-soft:#F6E3E0;
+  --warn:#8A6012; --warn-soft:#F7EBD4;
+  --ok:#2A6249; --ok-soft:#DFEDE6;
+  --shadow:0 1px 2px rgba(22,34,46,.06),0 6px 20px -12px rgba(22,34,46,.18);
+  --f-disp:"Bitter",Georgia,"Times New Roman",serif;
+  --f-body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#111820; --surface:#19222B; --surface-2:#212C36;
+    --ink:#E3EAEF; --ink-2:#9EB0BD; --ink-3:#788996;
+    --rule:#2A3742; --rule-2:#384855;
+    --accent:#7FB6DC; --accent-2:#5F9BC6; --accent-soft:#1A2A37;
+    --crit:#E3897A; --crit-soft:#33211E;
+    --warn:#D8AC55; --warn-soft:#2F2718;
+    --ok:#79B396; --ok-soft:#1B2A23;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111820; --surface:#19222B; --surface-2:#212C36;
+  --ink:#E3EAEF; --ink-2:#9EB0BD; --ink-3:#788996;
+  --rule:#2A3742; --rule-2:#384855;
+  --accent:#7FB6DC; --accent-2:#5F9BC6; --accent-soft:#1A2A37;
+  --crit:#E3897A; --crit-soft:#33211E;
+  --warn:#D8AC55; --warn-soft:#2F2718;
+  --ok:#79B396; --ok-soft:#1B2A23;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -14px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 28px 120px}
+
+.mast{border-bottom:2px solid var(--ink); padding:52px 0 26px; margin-bottom:44px}
+.eyebrow{
+  font-family:var(--f-mono); font-size:11.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+}
+h1{
+  font-family:var(--f-disp); font-weight:700; font-size:clamp(2.05rem,4.4vw,2.9rem);
+  line-height:1.09; letter-spacing:-.017em; margin:0; text-wrap:balance; max-width:26ch;
+}
+.dek{font-size:1.09rem; color:var(--ink-2); margin:16px 0 0; max-width:62ch}
+.mast-meta{
+  margin-top:20px; font-family:var(--f-mono); font-size:12px; color:var(--ink-3);
+  display:flex; flex-wrap:wrap; gap:6px 26px;
+}
+
+h2{
+  font-family:var(--f-disp); font-size:1.5rem; font-weight:700; line-height:1.2;
+  letter-spacing:-.012em; margin:0 0 6px; text-wrap:balance;
+}
+h3{
+  font-family:var(--f-body); font-size:1.03rem; font-weight:600;
+  margin:32px 0 4px; color:var(--ink);
+}
+section{margin-bottom:58px}
+.rule{height:1px; background:var(--rule-2); margin:14px 0 22px}
+p{margin:0 0 15px; max-width:68ch}
+strong{font-weight:600}
+code{
+  font-family:var(--f-mono); font-size:.855em; background:var(--surface-2);
+  padding:.12em .34em; border-radius:3px;
+}
+ul{margin:0 0 15px; padding-left:20px; max-width:68ch}
+li{margin-bottom:8px}
+li::marker{color:var(--ink-3)}
+
+.lede{
+  border-left:3px solid var(--accent); background:var(--accent-soft);
+  padding:18px 22px; margin:0 0 26px; max-width:68ch;
+}
+.lede p{margin:0; font-family:var(--f-disp); font-size:1.06rem; line-height:1.5}
+.lede p+p{margin-top:10px}
+
+/* ranked options */
+.ranks{display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); margin:0 0 22px}
+.rank{
+  background:var(--surface); padding:16px 20px;
+  display:grid; grid-template-columns:2.1rem minmax(0,1.5fr) repeat(3,minmax(0,1fr)); gap:6px 18px;
+  align-items:baseline;
+}
+@media (max-width:760px){
+  .rank{grid-template-columns:2.1rem minmax(0,1fr); }
+  .rank .m{grid-column:2}
+}
+.rank .n{
+  font-family:var(--f-disp); font-size:1.3rem; font-weight:700; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.rank .t{font-weight:600}
+.rank .t small{display:block; font-weight:400; color:var(--ink-2); font-size:13.5px; margin-top:3px}
+.rank .m{font-family:var(--f-mono); font-size:12px; color:var(--ink-2)}
+.rank .m b{display:block; font-weight:400; color:var(--ink-3); font-size:10.5px;
+  letter-spacing:.1em; text-transform:uppercase; margin-bottom:3px}
+.rank.worst{background:var(--crit-soft)}
+.rank.worst .n{color:var(--crit)}
+.rank.worst .t{text-decoration:line-through; text-decoration-color:var(--crit)}
+.rank.best .n{color:var(--ok)}
+
+/* findings */
+.finding{
+  border:1px solid var(--rule-2); background:var(--surface); box-shadow:var(--shadow);
+  padding:16px 20px; margin:0 0 14px; max-width:68ch;
+}
+.finding .fh{font-weight:600; margin-bottom:6px}
+.finding p{margin:0; font-size:15.5px; color:var(--ink-2)}
+.finding p+p{margin-top:8px}
+.finding.caution{border-left:3px solid var(--warn)}
+.finding.good{border-left:3px solid var(--ok)}
+
+pre{
+  font-family:var(--f-mono); font-size:12.8px; line-height:1.65;
+  background:var(--surface); color:var(--ink); border:1px solid var(--rule);
+  border-left:3px solid var(--accent-2); padding:15px 18px;
+  overflow-x:auto; margin:0 0 20px;
+}
+.c{color:var(--ink-3); font-style:italic}
+
+/* the two asks, set as letters */
+.ask{
+  background:var(--surface); border:1px solid var(--rule-2);
+  padding:22px 26px; margin:0 0 20px; box-shadow:var(--shadow);
+}
+.ask .subj{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--accent); padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.ask p{font-size:15.5px; max-width:64ch}
+.ask ul{font-size:15.5px}
+.ask pre{font-size:12px; margin:14px 0}
+.ask p:last-child{margin-bottom:0}
+
+.scroll{overflow-x:auto; margin:0 0 22px; border:1px solid var(--rule); background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px}
+th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+thead th{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:400; background:var(--surface-2);
+  border-bottom:1px solid var(--rule-2);
+}
+tbody tr:last-child td{border-bottom:none}
+tr.gap td{background:var(--warn-soft)}
+
+.dont{display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule)}
+.dont div{background:var(--surface); padding:13px 18px; font-size:15.5px}
+.dont b{color:var(--crit); font-weight:600}
+
+footer{
+  margin-top:70px; padding-top:22px; border-top:2px solid var(--ink);
+  font-family:var(--f-mono); font-size:12px; color:var(--ink-2);
+  display:flex; flex-wrap:wrap; gap:8px 30px;
+}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="eyebrow">Delaware State University · Student Assistant</p>
+  <h1>Getting Web-Only Content Into the Knowledge Base</h1>
+  <p class="dek">Where to source content from, in priority order — plus what desu.edu
+  actually exposes, and the two requests that unlock most of it.</p>
+  <div class="mast-meta">
+    <span>Version 1.0</span><span>September 2, 2026</span>
+    <span>Companion to the KB Content Standard</span>
+  </div>
+</header>
+
+<section>
+  <h2>The short answer</h2>
+  <div class="rule"></div>
+  <div class="lede">
+    <p>Don't download 50 pages as PDFs. It is the most work and produces the worst data.</p>
+  </div>
+  <p>A staff page is a <strong>table</strong> — name, title, email, phone in known columns.
+  That structure is exactly what makes it Class A content the bot can query. Printing it to
+  PDF flattens the table into a text blob, destroying the structure, and then someone has to
+  pay to rebuild it. You'd be converting good data into bad data by hand, fifty times.</p>
+  <p>Source content in this order. Stop at the first one you can get.</p>
+
+  <div class="ranks">
+    <div class="rank best">
+      <div class="n">1</div>
+      <div class="t">System of record<small>Entra ID, Banner, Ellucian Ethos</small></div>
+      <div class="m"><b>Effort</b>One request to IT</div>
+      <div class="m"><b>Freshness</b>Self-maintaining</div>
+      <div class="m"><b>Quality</b>Authoritative</div>
+    </div>
+    <div class="rank">
+      <div class="n">2</div>
+      <div class="t">CMS export<small>From whoever runs the website</small></div>
+      <div class="m"><b>Effort</b>One request to Web</div>
+      <div class="m"><b>Freshness</b>Re-export on demand</div>
+      <div class="m"><b>Quality</b>Good, structured</div>
+    </div>
+    <div class="rank">
+      <div class="n">3</div>
+      <div class="t">Scrape, with permission<small>Stamped and expiring</small></div>
+      <div class="m"><b>Effort</b>~30 min crawling</div>
+      <div class="m"><b>Freshness</b>Manual re-runs</div>
+      <div class="m"><b>Quality</b>Fair, needs review</div>
+    </div>
+    <div class="rank worst">
+      <div class="n">4</div>
+      <div class="t">Save each page as PDF<small>Don't</small></div>
+      <div class="m"><b>Effort</b>Days</div>
+      <div class="m"><b>Freshness</b>Frozen on save</div>
+      <div class="m"><b>Quality</b>Worst possible</div>
+    </div>
+  </div>
+  <p>The gap between rows 1 and 4 isn't a small optimization. It's the difference between a
+  directory that stays correct by itself and one that's wrong by November.</p>
+</section>
+
+<section>
+  <h2>What your site actually exposes</h2>
+  <div class="rule"></div>
+  <p>Checked before recommending anything. Findings specific to DSU:</p>
+
+  <div class="finding good">
+    <div class="fh">Your staff directory already has a system of record</div>
+    <p>A search for the DSU directory turns up
+    <code>bnrhvprod-ssb.desu.edu/PROD/bwpkedir.P_NameDirectory</code>. The
+    <code>bwpkedir</code> package is Ellucian Banner's employee directory. The staff pages
+    on desu.edu are a hand-maintained <em>copy</em> of data that already lives in Banner —
+    and, since DSU is a Microsoft shop, almost certainly in Entra ID too. Scraping the copy
+    inherits its staleness permanently.</p>
+  </div>
+
+  <div class="finding good">
+    <div class="fh">About 80 department phone numbers are on one page</div>
+    <p><code>/about/campus-contacts</code> holds the campus address, DSU @ Wilmington, nine
+    residence halls, ~80 departments with phone and fax, and emergency contacts. That single
+    page probably answers more student questions than all fifty staff pages combined — and
+    it's one fetch.</p>
+  </div>
+
+  <div class="finding good">
+    <div class="fh">Your sitemap is public and complete</div>
+    <p><code>/sitemap.xml</code> lists roughly 650 URLs with no child sitemaps. A crawl
+    doesn't need to guess URLs or click through navigation.</p>
+  </div>
+
+  <div class="finding">
+    <div class="fh">Departmental staff pages share one consistent structure</div>
+    <p>Name (often with credentials), job title, obfuscated email, phone — in table rows.
+    One extractor handles all of them. Content also spans subdomains
+    (<code>cast.desu.edu</code>, <code>business.desu.edu</code> keep their own faculty
+    profiles), which is much of why it's 50+ pages.</p>
+  </div>
+
+  <div class="finding caution">
+    <div class="fh">Two directory hosts aren't reachable from outside DSU</div>
+    <p><code>directorysearch.desu.edu</code> times out and the Banner host fails TLS
+    negotiation from an external network. Reaching those means running the crawl on campus —
+    a point in favor of owning the tooling rather than running it from a cloud sandbox.</p>
+  </div>
+
+  <div class="finding caution">
+    <div class="fh">Emails are deliberately obfuscated</div>
+    <p>Addresses appear as <code>jdoe [at] desu.edu</code> — an anti-harvesting measure by
+    whoever maintains the site. De-obfuscating at scale is a decision for the web team and
+    HR, not for a script. The crawler takes <code>--no-emails</code> for exactly this
+    reason; use it until someone signs off. Office-level contacts carry none of that
+    concern.</p>
+  </div>
+
+  <div class="finding caution">
+    <div class="fh">The HR page has a data error</div>
+    <p>One entry has a phone number typed where the email belongs. The crawler catches it by
+    comparing the row against its siblings — but it illustrates what you inherit when the
+    website is your source: you get the website's mistakes, and you get them silently.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What I'd do, in order</h2>
+  <div class="rule"></div>
+
+  <h3>This week — no approvals needed</h3>
+  <p><strong>Populate the routing table.</strong> Already built:
+  <code>kb/reference/routing.json</code> maps 42 student topics to the six pilot
+  departments, with escalation queues and per-topic answer guidance. Phone numbers are
+  deliberately <code>null</code> and flagged. Fill them from the one page that has them:</p>
+  <pre><code>echo "https://www.desu.edu/about/campus-contacts" &gt; one-page.txt
+python3 tools/crawl_directory.py --crawl --urls one-page.txt --no-emails \
+    --out kb/reference/contacts-offices.json</code></pre>
+  <p>Check the review CSV it writes alongside, paste confirmed numbers into
+  <code>routing.json</code>, clear the <code>office-contact-unpopulated</code> flags.
+  <strong>Roughly two hours for the highest-value contact content in the whole knowledge
+  base.</strong></p>
+  <div class="lede">
+    <p>This matters more than the roster, because students ask <em>"who do I talk to about a
+    hold on my account"</em> — not <em>"what is Jane Doe's extension"</em>. That mapping
+    exists on no page of your site. It's institutional knowledge, and writing it down is
+    most of what makes the bot feel like a front desk rather than a search box.</p>
+  </div>
+
+  <h3>Meanwhile — the stopgap, run honestly</h3>
+  <pre><code><span class="c"># review what would be fetched; fetches only the sitemap</span>
+python3 tools/crawl_directory.py --plan --out candidates.txt
+python3 tools/crawl_directory.py --crawl --urls candidates.txt --no-emails --limit 5
+python3 tools/crawl_directory.py --crawl --urls candidates.txt --no-emails</code></pre>
+  <p>Every record it writes is stamped <code>source_authority: "web-scrape"</code> with a
+  <strong>December 31 expiry</strong> and a <code>needs-owner-confirmation</code> flag. The
+  expiry is deliberate: a scraped roster that outlives one term is a liability, so it's
+  built to expire and force a re-source.</p>
+
+  <h3>When the export lands</h3>
+  <pre><code>python3 tools/import_entra.py users.json \
+    --out kb/reference/contacts-staff.json \
+    --supersede kb/reference/contacts-scraped.json</code></pre>
+  <p>Same record shape, <code>source_authority: "system-of-record"</code>, and
+  <code>supersedes</code> pointing at each scraped record so it retires cleanly.
+  <strong>Nothing downstream changes</strong> — not the tools, not the tests, not the answer
+  templates. That's what makes doing the scrape now safe rather than a decision you
+  regret.</p>
+  <p>The importer also excludes counseling, Title IX, HR investigations, payroll, and public
+  safety staff by construction. Those are Tier 3 topics; the bot routes to them by published
+  office contact and never by naming an individual. That protection is the <em>absence of
+  the records</em>, not a prompt asking the model to be careful.</p>
+</section>
+
+<section>
+  <h2>The two asks, ready to send</h2>
+  <div class="rule"></div>
+  <p>Both are small and specific, which is what gets them answered fast. A vague request
+  ("can I get staff data?") sits in a queue; a request naming seven fields and a filter gets
+  done in an afternoon.</p>
+
+  <div class="ask">
+    <div class="subj">To IT / Identity — Entra ID staff attributes</div>
+    <p>Hi — for the student assistant project I need a one-time export (ideally a repeatable
+    one) of staff directory attributes from Entra ID. Scoped as narrowly as I can make it:</p>
+    <ul>
+      <li><strong>Fields:</strong> <code>displayName</code>, <code>jobTitle</code>,
+      <code>department</code>, <code>mail</code>, <code>businessPhones</code>,
+      <code>officeLocation</code>, <code>accountEnabled</code>, <code>userType</code></li>
+      <li><strong>Filter:</strong> <code>accountEnabled eq true and userType eq 'Member'</code>
+      — active employees only</li>
+      <li><strong>Format:</strong> CSV or JSON, whichever is easier. Portal export
+      (Entra ID → Users → Download users) is fine.</li>
+    </ul>
+    <p>Graph equivalent if that's simpler:</p>
+    <pre><code>GET https://graph.microsoft.com/v1.0/users
+  ?$select=displayName,jobTitle,department,mail,
+           businessPhones,officeLocation,accountEnabled,userType
+  &amp;$filter=accountEnabled eq true and userType eq 'Member'
+  &amp;$top=999</code></pre>
+    <p>Deliberately <strong>not</strong> requesting <code>mobilePhone</code>,
+    <code>employeeId</code>, <code>manager</code>,
+    <code>onPremisesSamAccountName</code>, or anything about students. All of it is
+    directory information already published on desu.edu — this is the same data, from the
+    authoritative source instead of hand-maintained web pages.</p>
+    <p>If a recurring nightly or weekly pull is feasible later, that solves staff-directory
+    freshness permanently and I can stop maintaining a copy. One-time is a fine start.</p>
+  </div>
+
+  <div class="ask">
+    <div class="subj">To Web / Communications — staff directory content type</div>
+    <p>Hi — I'm building the knowledge base for the student chatbot and need staff/office
+    contact content from the site. Before I crawl ~50 pages, two questions:</p>
+    <ul>
+      <li>Are the departmental staff listings a structured content type in the CMS (fields
+      for name, title, email, phone) rather than hand-written HTML? If so, could you export
+      them — CSV or JSON? That's better data than I can get by scraping, and re-exportable
+      when things change.</li>
+      <li>Emails are obfuscated as <code>name [at] desu.edu</code>, which I take as an
+      intentional anti-harvesting measure. Two things: are you OK with the chatbot surfacing
+      staff emails to authenticated DSU students, and is there a directory API or feed I
+      should use instead of parsing pages?</li>
+    </ul>
+    <p>If neither is available I'll crawl the public pages politely — one request per
+    second, respecting robots.txt, from <code>DSU-Chatbot-KB/0.9</code>. Wanted to ask
+    before rather than after.</p>
+  </div>
+</section>
+
+<section>
+  <h2>The general rule for any future content</h2>
+  <div class="rule"></div>
+  <p>Before adding <strong>any</strong> source, ask in this order:</p>
+  <ul>
+    <li><strong>Where does this data actually live?</strong> Not where you <em>see</em> it —
+    where is it <em>entered</em>? A web page, a PDF, and a printed flyer are usually three
+    views of one upstream system. Go upstream.</li>
+    <li><strong>Is it already structured?</strong> Tables, directories, and lists are Class A
+    and want a tool, not an embedding. Only genuine prose belongs in vector search.</li>
+    <li><strong>Who owns it, and will they re-send it?</strong> A source with no owner has no
+    update path, and content with no update path is a future wrong answer.</li>
+    <li><strong>What's the smallest ask that gets it?</strong> Name the fields. Name the
+    filter. Say what you're <em>not</em> asking for.</li>
+    <li><strong>Only then:</strong> scrape — with permission, with an expiry, with provenance
+    stamped on every record, and a documented path to the real source.</li>
+  </ul>
+
+  <p>Applied to what's left on your list:</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Content</th><th>Where it really lives</th><th>Recommended path</th></tr></thead>
+    <tbody>
+      <tr><td>Staff &amp; office contacts</td><td>Entra ID / Banner</td><td>Ask IT; scrape as stopgap</td></tr>
+      <tr class="gap"><td>Department FAQs</td><td>Nowhere yet — staff heads and ticket queues</td><td>Author with liaisons; mine ITSM tickets for real phrasings</td></tr>
+      <tr class="gap"><td>Topic routing</td><td>Nowhere. Institutional knowledge</td><td>Author it. Started — 42 topics</td></tr>
+      <tr><td>Academic catalog</td><td>Catalog system / Registrar</td><td>Wait for the update. Ask for the source doc, not the published PDF</td></tr>
+      <tr><td>Fee schedules</td><td>Student Accounts billing config</td><td>Ask Student Accounts for the table, not the web page</td></tr>
+      <tr class="gap"><td>Office hours</td><td>Departmental, scattered</td><td>Collect during department onboarding — it's a form field, not a document</td></tr>
+      <tr><td>Forms library</td><td>CMS</td><td>Export the forms list: title, URL, owning office, purpose</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="lede">
+    <p>Note the pattern in the highlighted rows: <strong>the highest-value content doesn't
+    exist anywhere yet.</strong> Routing, FAQs, and office hours can't be harvested at any
+    quality, from any source, because nobody has written them down. That's the real content
+    bottleneck — not the 50 pages.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What not to do, and why</h2>
+  <div class="rule"></div>
+  <div class="dont">
+    <div><b>Don't save pages as PDFs.</b> Destroys structure, freezes the data, creates work.</div>
+    <div><b>Don't scrape without asking.</b> You work there. A one-line heads-up to the web team costs nothing and keeps your crawler out of someone's incident log.</div>
+    <div><b>Don't index an unreviewed extraction.</b> The crawler writes a review CSV next to the JSON precisely so a human signs off first. An unreviewed extraction gets cited to a student as fact.</div>
+    <div><b>Don't let a scraped record live without an expiry.</b> The gate hard-fails this now.</div>
+    <div><b>Don't build the roster before the routing.</b> The roster is more work, goes stale faster, carries more privacy surface, and answers fewer questions.</div>
+  </div>
+</section>
+
+<footer>
+  <span>Tooling: crawl_directory.py · import_entra.py · build_routing.py</span>
+  <span>Governance: KB Content Standard</span>
+  <span>Verified by tests/test_routing.py</span>
+</footer>
+
+</div>
