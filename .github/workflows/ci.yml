@@ -23,4 +23,5 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Run validation gate
+        if: success() || failure()
         run: python tools/validate_kb.py
