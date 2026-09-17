@@ -1,7 +1,8 @@
 # DSU Chatbot — Knowledge Base
 
 Content repository, ingestion pipeline, and retrieval tools for the DSU student
-chatbot. Platform-neutral: no dependency on the Phase 0 Azure-vs-Bedrock decision.
+chatbot. Content and tools stay platform-neutral. Phase 0 is decided (Sept 2026):
+DSU hosts on Azure, with Claude in Microsoft Foundry as the model.
 
 **Start here:** [`docs/kb-content-standard.md`](docs/kb-content-standard.md) — the
 standard everything else implements.
