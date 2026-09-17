@@ -2,7 +2,7 @@
 
 **Version:** 0.9 (draft for IT/implementation team + department liaison review)
 **Date:** August 26, 2026
-**Status:** Phase 0 deliverable. Platform-neutral by design — no dependency on Azure AI Search vs. Bedrock Knowledge Bases.
+**Status:** Phase 0 deliverable. Platform-neutral by design. Phase 0 concluded (Sept 2026): Azure AI Search, with Claude in Microsoft Foundry as the model.
 **Companion:** *DSU Chatbot Implementation Plan* v1.0 (Aug 11, 2026)
 
 ---
@@ -273,11 +273,11 @@ dsu-kb/
 
 ## 9. Platform portability
 
-Nothing above names a vendor. Mapping when Phase 0 concludes:
+Nothing above names a vendor. Phase 0 concluded (Sept 2026): DSU hosts on Azure and Claude is the approved model, so the Azure column is the one being built. The AWS column stays for reference.
 
 | This standard | Azure | AWS Bedrock |
 |---|---|---|
-| Class A tool | Azure OpenAI function calling → Function App | Bedrock Agent action group → Lambda |
+| Class A tool | Claude tool use in Microsoft Foundry → Function App | Bedrock Agent action group → Lambda |
 | Class B/C index | Azure AI Search (vector + `filter` on envelope fields) | Bedrock Knowledge Base + metadata filters |
 | Content repo | GitHub/Azure Repos + Actions running the gate | Same |
 | Envelope fields | Search index facets/filters | KB metadata `.metadata.json` sidecars |
