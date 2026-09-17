@@ -4,6 +4,8 @@ Content repository, ingestion pipeline, and retrieval tools for the DSU student
 chatbot. Content and tools stay platform-neutral. Phase 0 is decided (Sept 2026):
 DSU hosts on Azure, with Claude in Microsoft Foundry as the model.
 
+**New to the project?** [`docs/PROJECT_GUIDE.md`](docs/PROJECT_GUIDE.md) for what this is, the decisions made, and how we work.
+
 **Start here:** [`docs/kb-content-standard.md`](docs/kb-content-standard.md) — the
 standard everything else implements.
 **Adding content?** [`docs/sourcing-guide.md`](docs/sourcing-guide.md) — where to get it
